@@ -17,7 +17,7 @@ layout: "layouts/base.vto"
                 <li class="flow">
                     <h3 class="color-primary-900 fs-step-1">{{ service.title }}</h3>
                     {{ service.description |> md }}
-                    <a href="{{ service.url }}">Lees verder</a>
+                    <a class="button" href="{{ service.url }}">Lees verder</a>
                 </li>
             {{ /for }}
         </ul>

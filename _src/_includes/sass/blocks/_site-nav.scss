@@ -1,7 +1,24 @@
 .site-nav {
+
     &__list {
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-wrap: wrap;
-        gap: var(--space-xs);
+        gap: 1px;
+    }
+}
+
+.site-nav li a {
+    display: flex;
+    text-decoration: none;
+    color: var(--neutral-400);
+    padding: var(--space-xs);
+    border-radius: var(--radius-xs);
+
+    &:is(:hover),
+    &[aria-current="page"] {
+        color: var(--neutral-50);
+        background: var(--primary-600);
     }
 }

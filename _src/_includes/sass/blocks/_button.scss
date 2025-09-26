@@ -1,0 +1,16 @@
+.button {
+    --_button-foreground: var(--button-foreground);
+    --_button-background: var(--button-background);
+    --_button-font-size: var(--button-font-size);
+    --_button-font-weight: var(--button-font-weight);
+    --_button-padding: var(--button-padding);
+
+    display: inline-flex;
+    color: var(--_button-foreground);
+    background: var(--_button-background);
+    font-size: var(--_button-font-size);
+    font-weight: var(--_button-font-weight);
+    padding: var(--_button-padding);
+    cursor: pointer;
+    text-decoration: none;
+}
