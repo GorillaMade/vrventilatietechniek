@@ -1,0 +1,9 @@
+.site-header {
+    background: var(--site-header-background);
+    padding-inline: var(--site-header-padding-inline);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+}

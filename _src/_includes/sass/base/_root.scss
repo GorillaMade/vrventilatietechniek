@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+:root {
+    inline-size: allow-keywords;
+
+    // Font(s)
+    @each $prop, $value in $font-families {
+        --ff-#{$prop}: #{$value};
+    }
+
+    @each $prop, $value in $font-sizes {
+        --fs-#{$prop}: #{$value};
+    }
+
+    @each $prop, $value in $font-weights {
+        --fw-#{$prop}: #{$value};
+    }
+
+    // Spaces
+    @each $space, $value in $space-sizes {
+        --space-#{$space}: #{$value};
+    }
+
+    @each $color, $shades in $active-theme {
+        @each $shade, $value in $shades {
+            --#{$color}-#{$shade}: #{$value};
+        }
+    }
+}
+

@@ -1,0 +1,34 @@
+---
+layout: "layouts/base.vto"
+---
+
+<section class="[ hero ] [ stack ] []">
+    <img src="{{ block_hero.image.path }}" alt="{{ block_hero.image.desc }}">
+    <div class="hero__inner wrapper flow">
+        <h1 class="mt-0">{{ block_hero.title }}</h1>
+    </div>
+</section>
+<section class="[ services ] [] [ region ]">
+    <div class="wrapper flow">
+        <h2 class="block-heading mt-0 color-primary-500">{{ block_services.title }}</h2>
+        <ul class="grid" data-layout="thirds" role="list">
+            {{ set services = search.pages("type=service", "order") }}
+            {{ for service of services }}
+                <li class="flow">
+                    <h3 class="color-primary-900 fs-step-1">{{ service.title }}</h3>
+                    {{ service.description |> md }}
+                    <a href="{{ service.url }}">Lees verder</a>
+                </li>
+            {{ /for }}
+        </ul>
+    </div>
+</section>
+<section class="[ about ] [] [ full-width-split-screen ]">
+    <img src="{{ block_about.image.path }}" alt="{{ block_about.image.desc }}">
+    <div class="flow color-neutral-50 bg-primary-600">
+        <h2 class="mt-0">{{ block_about.title }}</h2>
+        {{ block_services.body |> md }}
+
+        <a href="{{ block_about.link }}" class="button">Meer informatie</a>
+    </div>
+</section>
