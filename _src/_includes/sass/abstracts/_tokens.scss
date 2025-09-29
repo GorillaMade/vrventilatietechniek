@@ -5,3 +5,20 @@
 //
 
 $active-theme: $light;
+
+
+
+// -----------------------------------------------------------------------------
+// Hamburger
+// -----------------------------------------------------------------------------
+
+$hamburger-background: var(--primary-600);
+$hamburger-padding: var(--space-2xs);
+$hamburger-animation-timing: 200ms ease-in-out;
+$hamburger-border: none;
+$hamburger-border-radius: .125rem;
+
+$hamburger-bar-color: var(--neutral-50);
+$hamburger-bar-width: 36px;
+$hamburger-bar-height: 6px;
+$hamburger-bar-gap: 4px;

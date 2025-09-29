@@ -1,6 +1,7 @@
 .site-header {
     background: var(--site-header-background);
     padding-inline: var(--site-header-padding-inline);
+    padding-block: var(--site-header-padding-block);
 
     &__inner {
         display: flex;

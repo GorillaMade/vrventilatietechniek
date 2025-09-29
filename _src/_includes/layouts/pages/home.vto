@@ -8,6 +8,11 @@ layout: "layouts/base.vto"
         <h1 class="mt-0">{{ block_hero.title }}</h1>
     </div>
 </section>
+<section class="[ logo-reel ] [ bg-neutral-100 ] [ region ]">
+    <div class="wrapper">
+        logo reel
+    </div>
+</section>
 <section class="[ services ] [] [ region ]">
     <div class="wrapper flow">
         <h2 class="block-heading mt-0 color-primary-500">{{ block_services.title }}</h2>
@@ -17,7 +22,7 @@ layout: "layouts/base.vto"
                 <li class="flow">
                     <h3 class="color-primary-900 fs-step-1">{{ service.title }}</h3>
                     {{ service.description |> md }}
-                    <a class="button" href="{{ service.url }}">Lees verder</a>
+                    <a class="button--link" styles="--button-foreground: red;" href="{{ service.url }}">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
                 </li>
             {{ /for }}
         </ul>
@@ -29,6 +34,6 @@ layout: "layouts/base.vto"
         <h2 class="mt-0">{{ block_about.title }}</h2>
         {{ block_services.body |> md }}
 
-        <a href="{{ block_about.link }}" class="button">Meer informatie</a>
+        <a href="{{ block_about.link.url }}" class="button--link">{{ block_about.link.text }} <ion-icon name="arrow-forward-outline"></ion-icon></a>
     </div>
 </section>

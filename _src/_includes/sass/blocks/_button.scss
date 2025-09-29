@@ -14,3 +14,27 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+
+
+// -----------------------------------------------------------------------------
+// Link
+// -----------------------------------------------------------------------------
+
+.button--link {
+    --_link-foreground: var(--link-foreground, inherit);
+    --_link-foreground-hover: var(--link-foreground-hover, currentColor);
+    color: var(--_link-foreground);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-block: var(--space-xs);
+    gap: .5rem;
+    text-decoration: none;
+    transition: gap 300ms ease-in-out;
+
+    &:hover {
+        --link-foreground: var(--_link-foreground-hover);
+        gap: 1rem;
+    }
+}

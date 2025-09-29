@@ -30,7 +30,9 @@ block_about:
   title: "Over mij en mijn missie"
   body: |
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum modi voluptas vel id expedita corporis deserunt dicta! Error nulla, quisquam quod, earum esse, quae voluptatem voluptatum nobis harum beatae in.
-  link: "/over-mij"
+  link:
+    text: "Lees meer over mij"
+    url: "/over-mij"
 ---
 
 # Hello world
