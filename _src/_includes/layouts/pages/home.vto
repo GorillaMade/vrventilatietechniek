@@ -8,11 +8,6 @@ layout: "layouts/base.vto"
         <h1 class="mt-0">{{ block_hero.title }}</h1>
     </div>
 </section>
-<section class="[ logo-reel ] [ bg-neutral-100 ] [ region ]">
-    <div class="wrapper">
-        logo reel
-    </div>
-</section>
 <section class="[ services ] [] [ region ]">
     <div class="wrapper flow">
         <h2 class="block-heading mt-0 color-primary-500">{{ block_services.title }}</h2>
@@ -26,6 +21,15 @@ layout: "layouts/base.vto"
                 </li>
             {{ /for }}
         </ul>
+    </div>
+</section>
+<section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
+    <div class="marquee__track">
+        <div class="logo"><img src="static/media/logos/brink-logo.png" alt="Logo 1"></div>
+        <div class="logo"><img src="static/media/logos/duco-logo.png" alt="Logo 2"></div>
+        <div class="logo"><img src="static/media/logos/itho-logo.png" alt="Logo 3"></div>
+        <div class="logo"><img src="static/media/logos/orcon-logo.png" alt="Logo 4"></div>
+        <div class="logo"><img src="static/media/logos/zehnder-logo.png" alt="Logo 5"></div>
     </div>
 </section>
 <section class="[ about ] [] [ full-width-split-screen ]">

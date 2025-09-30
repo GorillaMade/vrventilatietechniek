@@ -51,11 +51,6 @@
 </h1>
     </div>
 </section>
-<section class="[ logo-reel ] [ bg-neutral-100 ] [ region ]">
-    <div class="wrapper">
-        logo reel
-    </div>
-</section>
 <section class="[ services ] [] [ region ]">
     <div class="wrapper flow">
         <h2 class="block-heading mt-0 color-primary-500">Mijn specialiteiten</h2>
@@ -76,6 +71,15 @@
                     <a class="button--link" styles="--button-foreground: red;" href="/services/onderhoud/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
                 </li>
         </ul>
+    </div>
+</section>
+<section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
+    <div class="marquee__track">
+        <div class="logo"><img src="static/media/logos/brink-logo.png" alt="Logo 1"></div>
+        <div class="logo"><img src="static/media/logos/duco-logo.png" alt="Logo 2"></div>
+        <div class="logo"><img src="static/media/logos/itho-logo.png" alt="Logo 3"></div>
+        <div class="logo"><img src="static/media/logos/orcon-logo.png" alt="Logo 4"></div>
+        <div class="logo"><img src="static/media/logos/zehnder-logo.png" alt="Logo 5"></div>
     </div>
 </section>
 <section class="[ about ] [] [ full-width-split-screen ]">
@@ -100,5 +104,33 @@
 <!-- Scripts -->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const track = document.querySelector(".marquee__track");
+  const container = track.parentNode;
+
+  // Clone de inhoud van track en append aan dezelfde track
+  track.innerHTML += track.innerHTML;
+
+  let x = 0;
+  const speed = 50; // pixels per seconde
+
+  function animate() {
+    x -= speed / 60;
+
+    // Zodra x <= helft van totale track width (originele set) → reset x
+    const halfWidth = track.scrollWidth / 2;
+    if (x <= -halfWidth) x = 0;
+
+    track.style.transform = `translateX(${x}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+});
+</script>
 
 </body></html>
