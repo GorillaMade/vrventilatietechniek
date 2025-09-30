@@ -69,18 +69,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const track = document.querySelector(".marquee__track");
-  const container = track.parentNode;
 
-  // Clone de inhoud van track en append aan dezelfde track
+  // Clone voor naadloze loop
   track.innerHTML += track.innerHTML;
 
   let x = 0;
   const speed = 50; // pixels per seconde
+  let lastTimestamp = null;
 
-  function animate() {
-    x -= speed / 60;
+  function animate(timestamp) {
+    if (!lastTimestamp) lastTimestamp = timestamp;
+    const delta = (timestamp - lastTimestamp) / 1000; // seconden sinds vorig frame
+    lastTimestamp = timestamp;
 
-    // Zodra x <= helft van totale track width (originele set) → reset x
+    x -= speed * delta; // beweging gebaseerd op echte tijd
+
+    // reset na 1 set
     const halfWidth = track.scrollWidth / 2;
     if (x <= -halfWidth) x = 0;
 
