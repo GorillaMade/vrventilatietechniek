@@ -6,6 +6,8 @@
 
 <link rel="preload" href="/css/styles.css" as="style">
 <link rel="stylesheet" href="/css/styles.css">
+
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://localhost:3000/algemene-voorwaarden/">
 <meta name="twitter:card" content="summary">
@@ -15,7 +17,7 @@
     <header class="site-header site-header--fixed">
     <div class="site-header__inner wrapper">
         <a class="brand" href="/">
-            <span>
+            <span class="color-primary-500">
                 VR ventilatie Techniek
             </span>
         </a>
@@ -141,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.site-nav a[href="#${id}"]`);
+      const navLink = document.querySelector(`.site-nav li a[href="#${id}"]`);
       if (!navLink) return;
 
       if (entry.isIntersecting) {

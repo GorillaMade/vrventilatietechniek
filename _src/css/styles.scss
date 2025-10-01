@@ -19,7 +19,6 @@ ul:is([role="navigation"]) {
 .brand {
     flex: 1;
     text-decoration: none;
-    color: var(--primary-400);
 
     span {
         font-weight: var(--fw-semibold);
@@ -88,7 +87,7 @@ h3 {
         h1 {
             font-size: var(--fs-step-5);
             color: var(--primary-500);
-            margin-block-end: var(--space-l);
+            //margin-block-end: var(--space-l);
         }
 
         p {
@@ -189,7 +188,7 @@ h3 {
 
 dialog {
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius-s);
   padding: var(--space-l);
   max-width: 60rem;
 }

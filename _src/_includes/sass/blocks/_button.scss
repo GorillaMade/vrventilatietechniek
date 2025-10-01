@@ -8,7 +8,7 @@
     --_button-font-size: var(--button-font-size, #{$button-font-size});
     --_button-font-weight: var(--button-font-weight, #{$button-font-weight});
     --_button-padding: var(--button-padding, #{$button-padding});
-    --_button-radius: var(--button-radius, .75rem);
+    --_button-radius: var(--button-radius, #{$button-radius});
 
     all: unset;
     display: inline-flex;

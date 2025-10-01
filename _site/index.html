@@ -6,6 +6,8 @@
 
 <link rel="preload" href="/css/styles.css" as="style">
 <link rel="stylesheet" href="/css/styles.css">
+
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://localhost:3000/">
 <meta name="twitter:card" content="summary">
@@ -15,7 +17,7 @@
     <header class="site-header site-header--fixed">
     <div class="site-header__inner wrapper">
         <a class="brand" href="/">
-            <span>
+            <span class="color-primary-500">
                 VR ventilatie Techniek
             </span>
         </a>
@@ -136,12 +138,12 @@
 </section>
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
-        <h2>Mijn werk in beeld</h2>
+        <h2 class="color-primary-500">Mijn werk in beeld</h2>
     </div>
 </section>
 <section id="contact" class="[ contact ] [] [ full-width-split-screen ]">
-    <div class="content color-primary-800 bg-primary-100">
-        <h2 class="mt-0">Contact</h2>
+    <div class="content bg-primary-50 color-primary-800">
+        <h2 class="mt-0 color-primary-500">Contact</h2>
         <p>Een goed werkend ventilatiesysteem draagt bij aan een gezond binnenklimaat. Ik staat klaar om al uw vragen te beantwoorden en samen te kijken naar de beste oplossing voor uw woning.</p>
     </div>
     <div class="flow color-primary-900 bg-primary-200">
@@ -197,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.site-nav a[href="#${id}"]`);
+      const navLink = document.querySelector(`.site-nav li a[href="#${id}"]`);
       if (!navLink) return;
 
       if (entry.isIntersecting) {

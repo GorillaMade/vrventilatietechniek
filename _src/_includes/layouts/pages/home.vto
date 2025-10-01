@@ -58,12 +58,12 @@ layout: "layouts/base.vto"
 </section>
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
-        <h2>{{ block_portfolio.title }}</h2>
+        <h2 class="color-primary-500">{{ block_portfolio.title }}</h2>
     </div>
 </section>
 <section id="contact" class="[ contact ] [] [ full-width-split-screen ]">
-    <div class="content color-primary-800 bg-primary-100">
-        <h2 class="mt-0">{{ block_contact.title }}</h2>
+    <div class="content bg-primary-50 color-primary-800">
+        <h2 class="mt-0 color-primary-500">{{ block_contact.title }}</h2>
         {{ block_contact.body |> md }}
     </div>
     <div class="flow color-primary-900 bg-primary-200">
