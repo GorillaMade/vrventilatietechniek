@@ -27,3 +27,20 @@ $hamburger-bar-color: var(--neutral-50);
 $hamburger-bar-width: 36px;
 $hamburger-bar-height: 6px;
 $hamburger-bar-gap: 4px;
+
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+
+$button-foreground: var(--neutral-50);
+$button-foreground-hover: var(--neutral-50);
+
+
+$button-background: var(--primary-400);
+$button-background-hover: var(--primary-800);
+
+$button-font-size: var(--fs-step-0);
+$button-font-weight: var(--fw-semibold);
+
+$button-padding: var(--space-xs) var(--space-s);

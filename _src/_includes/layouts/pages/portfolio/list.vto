@@ -1,0 +1,20 @@
+---
+layout: "layouts/base.vto"
+---
+
+<section class="[] [] [ region ]">
+    <div class="wrapper flow">
+        <h1 class="color-primary-800">{{ heading }}</h1>
+        {{ content }}
+        <ul class="grid" data-layout="thirds" role="list">
+        {{ set portfolio = search.pages("type=portfolio", "order") }}
+        {{ for item of portfolio }}
+            <li class="flow">
+                <h3 class="color-primary-900 fs-step-1">{{ item.title }}</h3>
+                {{ item.description |> md }}
+                <a class="button--link" styles="--button-foreground: red;" href="{{ item.url }}">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
+            </li>
+        {{ /for }}
+        </ul>
+    </div>
+</section>

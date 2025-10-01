@@ -10,7 +10,7 @@ layout: "layouts/base.vto"
             <li class="flow">
                 <h3 class="color-primary-900 fs-step-1">{{ service.title }}</h3>
                 {{ service.description |> md }}
-                <a href="{{ service.url }}">Lees verder</a>
+                <a class="button--link" styles="--button-foreground: red;" href="{{ service.url }}">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
             </li>
         {{ /for }}
         </ul>

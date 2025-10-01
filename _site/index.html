@@ -12,7 +12,7 @@
 <meta name="generator" content="Lume v3.0.9">
 </head>
 <body>
-    <header class="site-header">
+    <header class="site-header site-header--fixed">
     <div class="site-header__inner wrapper">
         <a class="brand" href="/">
             <span>
@@ -26,18 +26,18 @@
         </button>
         <nav class="site-nav">
     <ul class="site-nav__list" role="navigation">
-            <li>
-                <a href="/" class="site-nav__link" aria-current="page">Home</a>
-            </li>
-            <li>
-                <a href="/over-mij/" class="site-nav__link">Over mij</a>
-            </li>
-            <li>
-                <a href="/diensten/" class="site-nav__link">Diensten</a>
-            </li>
-            <li>
-                <a href="/portfolio/" class="site-nav__link">Portfolio</a>
-            </li>
+        <li>
+            <a href="#over-mij">Over mij</a>
+        </li>
+        <li>
+            <a href="#diensten">Diensten</a>
+        </li>
+        <li>
+            <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
     </ul>
 </nav>
     </div>
@@ -46,49 +46,98 @@
     <section class="[ hero ] [ stack ] []">
     <img src="https://media.gettyimages.com/id/1148661849/photo/beautiful-young-asian-woman-drinking-coffee-and-enjoying-fresh-air-on-balcony-in-the-morning.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=641PanVR6AkbZfSRrPfXfd3WZPD4BnNttSZbVFC43eQ=" alt="Korte beschrijving van de foto">
     <div class="hero__inner wrapper flow region">
-        <h1 class="mt-0">Frisse lucht gegarandeerd
-<span>Specialist in ventilatie-inspectie, installatie en onderhoud.</span>
-</h1>
+        <h1 class="mt-0">Schone lucht, slimme ventilatie.</h1>
+        <p>Van advies tot installatie: alles voor een optimaal binnenklimaat.</p>
+        <a href="#contact" class="button">Neem contact op voor advies</a>
     </div>
 </section>
-<section class="[ services ] [] [ region ]">
+<section id="diensten" class="[ services ] [] [ region ]">
     <div class="wrapper flow">
-        <h2 class="block-heading mt-0 color-primary-500">Mijn specialiteiten</h2>
+        <h2 class="block-heading mt-0 color-primary-500">Mijn diensten</h2>
         <ul class="grid" data-layout="thirds" role="list">
-                <li class="flow">
-                    <h3 class="color-primary-900 fs-step-1">Installatie</h3>
-                    <p>Ik installeer ventilatiesystemen die perfect aansluiten op uw situatie. Zo voorkomt u vocht en schimmel en geniet u van frisse, gezonde lucht.</p>
-                    <a class="button--link" styles="--button-foreground: red;" href="/services/installatie/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
-                </li>
                 <li class="flow">
                     <h3 class="color-primary-900 fs-step-1">Inspectie</h3>
                     <p>Met een persoonlijke inspectie controleer ik uw systeem grondig. Problemen komen zo op tijd aan het licht en de luchtkwaliteit blijft op peil.</p>
-                    <a class="button--link" styles="--button-foreground: red;" href="/services/inspectie/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
+                    <button class="button--link" data-dialog="dialog-1">
+                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                    </button>
+
+                    <!-- Dialog element -->
+                    <dialog id="dialog-1">
+                        <form class="flow" method="dialog">
+                            <h3 class="mt-0">Inspectie</h3>
+                            <p>Door middel van een grondige inspectie brengen wij de staat en werking van uw ventilatiesysteem in kaart. Vaak merkt u niet direct dat er vervuiling of een defect aanwezig is, terwijl dit wél grote gevolgen kan hebben voor luchtkwaliteit en energiekosten. Met onze inspecties ontdekt u tijdig problemen en voorkomt u onnodige reparaties, waardoor u verzekerd blijft van frisse en gezonde lucht.</p>
+                            <div>
+                                <button class="button">Sluiten</button>
+                            </div>
+                        </form>
+                    </dialog>
+                </li>
+                <li class="flow">
+                    <h3 class="color-primary-900 fs-step-1">Installatie</h3>
+                    <p>Ik installeer ventilatiesystemen die perfect aansluiten op uw situatie. Zo voorkomt u vocht en schimmel en geniet u van frisse, gezonde lucht.</p>
+                    <button class="button--link" data-dialog="dialog-2">
+                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                    </button>
+
+                    <!-- Dialog element -->
+                    <dialog id="dialog-2">
+                        <form class="flow" method="dialog">
+                            <h3 class="mt-0">Installatie</h3>
+                            <p>Wij zorgen voor de professionele installatie van ventilatiesystemen die perfect aansluiten op uw woning of bedrijfspand. Een slecht geïnstalleerd systeem kan leiden tot vochtproblemen, schimmelvorming en ongezonde lucht. Met onze vakkundige aanpak bent u verzekerd van een optimale luchtcirculatie, energiezuinig functioneren en een gezond binnenklimaat.</p>
+                            <div>
+                                <button class="button">Sluiten</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </li>
                 <li class="flow">
                     <h3 class="color-primary-900 fs-step-1">Onderhoud</h3>
                     <p>Ik zorg voor regelmatig onderhoud zodat uw systeem schoon, zuinig en betrouwbaar blijft. Dit verlengt de levensduur en houdt uw binnenklimaat gezond.</p>
-                    <a class="button--link" styles="--button-foreground: red;" href="/services/onderhoud/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
+                    <button class="button--link" data-dialog="dialog-3">
+                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                    </button>
+
+                    <!-- Dialog element -->
+                    <dialog id="dialog-3">
+                        <form class="flow" method="dialog">
+                            <h3 class="mt-0">Onderhoud</h3>
+                            <p>Regelmatig onderhoud houdt uw ventilatiesysteem schoon, efficiënt en betrouwbaar. Zonder onderhoud hopen stof en vuil zich op, waardoor de luchtkwaliteit afneemt en het systeem meer energie verbruikt. Met onze onderhoudsservice verlengt u de levensduur van uw installatie, bespaart u op kosten en creëert u een blijvend gezond leef- en werkklimaat.</p>
+                            <div>
+                                <button class="button">Sluiten</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </li>
         </ul>
     </div>
 </section>
 <section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
     <div class="marquee__track">
-        <div class="logo"><img src="static/media/logos/brink-logo.png" alt="Logo 1"></div>
-        <div class="logo"><img src="static/media/logos/duco-logo.png" alt="Logo 2"></div>
-        <div class="logo"><img src="static/media/logos/itho-logo.png" alt="Logo 3"></div>
-        <div class="logo"><img src="static/media/logos/orcon-logo.png" alt="Logo 4"></div>
-        <div class="logo"><img src="static/media/logos/zehnder-logo.png" alt="Logo 5"></div>
+            <div class="logo"><img src="static/media/logos/brink-logo.png" alt="Brink"></div>
+            <div class="logo"><img src="static/media/logos/duco-logo.png" alt="Duco"></div>
+            <div class="logo"><img src="static/media/logos/itho-logo.png" alt="Itho"></div>
+            <div class="logo"><img src="static/media/logos/orcon-logo.png" alt="Orcon"></div>
+            <div class="logo"><img src="static/media/logos/zehnder-logo.png" alt="Zehnder"></div>
     </div>
 </section>
-<section class="[ about ] [] [ full-width-split-screen ]">
-    <img src="https://images.unsplash.com/photo-1758798157512-f0a864c696c9?q=80&amp;w=1453&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+<section id="over-mij" class="[ about ] [] [ full-width-split-screen ]">
+    <img class="ratio--square" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
     <div class="flow color-neutral-50 bg-primary-600">
-        <h2 class="mt-0">Over mij en mijn missie</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum modi voluptas vel id expedita corporis deserunt dicta! Error nulla, quisquam quod, earum esse, quae voluptatem voluptatum nobis harum beatae in.</p>
-
-        <a href="/over-mij" class="button--link">Lees meer over mij <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        <h2 class="mt-0">Over VR Ventilatie Techniek</h2>
+        <p>VR Ventilatie Techniek is opgericht door Vernal Ricardo, die al meer dan 10 jaar ervaring heeft in ventilatie en luchtbehandelingssystemen. Wij helpen bedrijven en particulieren met professionele ventilatie-oplossingen die zorgen voor een gezond en comfortabel binnenklimaat.</p>
+<p>Bij VR Ventilatie Techniek staat kwaliteit, betrouwbaarheid en service voorop. Van advies en ontwerp tot installatie en onderhoud: wij begeleiden u bij elk stap. Met onze kennis en ervaring leveren wij op maat gemaakte oplossingen die passen bij uw gebouw en wensen.</p>
+<p>Kies voor VR Ventilatie Techniek en ervaar het verschil van een expert die meedenkt en resultaten levert.</p>
+    </div>
+</section>
+<section id="portfolio" class="[ portfolio ] [] [ region ]">
+    <div class="wrapper">
+        <h2>Mijn werk</h2>
+    </div>
+</section>
+<section id="contact" class="[ contact ] [] [ region ]">
+    <div class="wrapper">
+        <h2>Contact</h2>
     </div>
 </section>
     </main>
@@ -107,34 +156,80 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const navLinks = document.querySelectorAll(".site-nav li a[href^='#']");
+  const sections = [];
 
-  const track = document.querySelector(".marquee__track");
+  navLinks.forEach(link => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) sections.push(target);
+  });
 
-  // Clone voor naadloze loop
-  track.innerHTML += track.innerHTML;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute("id");
+      const navLink = document.querySelector(`.site-nav a[href="#${id}"]`);
+      if (!navLink) return;
 
-  let x = 0;
-  const speed = 50; // pixels per seconde
-  let lastTimestamp = null;
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.removeAttribute("aria-current"));
+        navLink.setAttribute("aria-current", "page");
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: "0px 0px -50% 0px", // actieve sectie zodra hij 50% in beeld is
+    threshold: 0
+  });
 
-  function animate(timestamp) {
-    if (!lastTimestamp) lastTimestamp = timestamp;
-    const delta = (timestamp - lastTimestamp) / 1000; // seconden sinds vorig frame
-    lastTimestamp = timestamp;
-
-    x -= speed * delta; // beweging gebaseerd op echte tijd
-
-    // reset na 1 set
-    const halfWidth = track.scrollWidth / 2;
-    if (x <= -halfWidth) x = 0;
-
-    track.style.transform = `translateX(${x}px)`;
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
+  sections.forEach(section => observer.observe(section));
 });
+</script>
+
+
+<script>
+document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const dialogId = btn.dataset.dialog;
+        const dialog = document.getElementById(dialogId);
+        if (typeof dialog.showModal === "function") {
+            dialog.showModal();
+        } else {
+            alert("Uw browser ondersteunt geen dialog-element");
+        }
+    });
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const track = document.querySelector(".marquee__track");
+
+        // Clone voor naadloze loop
+        track.innerHTML += track.innerHTML;
+
+        let x = 0;
+        const speed = 50; // pixels per seconde
+        let lastTimestamp = null;
+
+        function animate(timestamp) {
+            if (!lastTimestamp) lastTimestamp = timestamp;
+            const delta = (timestamp - lastTimestamp) / 1000; // seconden sinds vorig frame
+            lastTimestamp = timestamp;
+
+            x -= speed * delta; // beweging gebaseerd op echte tijd
+
+            // reset na 1 set
+            const halfWidth = track.scrollWidth / 2;
+            if (x <= -halfWidth) x = 0;
+
+            track.style.transform = `translateX(${x}px)`;
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    });
 </script>
 
 </body></html>

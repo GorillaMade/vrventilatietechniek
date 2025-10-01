@@ -2,7 +2,7 @@
 layout: "layouts/pages/page-wide.vto"
 ---
 
-# Algemene Voorwaarden – [Bedrijfsnaam]
+# Algemene Voorwaarden – VR Ventilatie Techniek
 
 **Versie:** [dd-mm-jjjj]  
 **Bedrijf:** [Bedrijfsnaam], gevestigd te [Plaats], ingeschreven bij de Kamer van Koophandel onder nummer [KvK-nummer].

@@ -6,18 +6,33 @@ layout: "layouts/base.vto"
     <img src="{{ block_hero.image.path }}" alt="{{ block_hero.image.desc }}">
     <div class="hero__inner wrapper flow region">
         <h1 class="mt-0">{{ block_hero.title }}</h1>
+        <p>Van advies tot installatie: alles voor een optimaal binnenklimaat.</p>
+        <a href="{{ block_hero.link.url }}" class="button">{{ block_hero.link.text }}</a>
     </div>
 </section>
-<section class="[ services ] [] [ region ]">
+<section id="diensten" class="[ services ] [] [ region ]">
     <div class="wrapper flow">
         <h2 class="block-heading mt-0 color-primary-500">{{ block_services.title }}</h2>
         <ul class="grid" data-layout="thirds" role="list">
-            {{ set services = search.pages("type=service", "order") }}
-            {{ for service of services }}
+        {{ set services = search.pages("type=service", "id") }}
+        {{ for service of services }}
                 <li class="flow">
                     <h3 class="color-primary-900 fs-step-1">{{ service.title }}</h3>
                     {{ service.description |> md }}
-                    <a class="button--link" styles="--button-foreground: red;" href="{{ service.url }}">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
+                    <button class="button--link" data-dialog="dialog-{{ service.id }}">
+                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                    </button>
+
+                    <!-- Dialog element -->
+                    <dialog id="dialog-{{ service.id }}">
+                        <form class="flow" method="dialog">
+                            <h3 class="mt-0">{{ service.title }}</h3>
+                            {{ service.content |> md }}
+                            <div>
+                                <button class="button">Sluiten</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </li>
             {{ /for }}
         </ul>
@@ -25,19 +40,25 @@ layout: "layouts/base.vto"
 </section>
 <section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
     <div class="marquee__track">
-        <div class="logo"><img src="static/media/logos/brink-logo.png" alt="Logo 1"></div>
-        <div class="logo"><img src="static/media/logos/duco-logo.png" alt="Logo 2"></div>
-        <div class="logo"><img src="static/media/logos/itho-logo.png" alt="Logo 3"></div>
-        <div class="logo"><img src="static/media/logos/orcon-logo.png" alt="Logo 4"></div>
-        <div class="logo"><img src="static/media/logos/zehnder-logo.png" alt="Logo 5"></div>
+        {{ for item of block_marquee.list }}
+            <div class="logo"><img src="{{ item.image }}" alt="{{ item.name }}"></div>
+        {{ /for }}
     </div>
 </section>
-<section class="[ about ] [] [ full-width-split-screen ]">
-    <img src="{{ block_about.image.path }}" alt="{{ block_about.image.desc }}">
+<section id="over-mij" class="[ about ] [] [ full-width-split-screen ]">
+    <img class="ratio--square" src="{{ block_about.image.path }}" alt="{{ block_about.image.desc }}">
     <div class="flow color-neutral-50 bg-primary-600">
         <h2 class="mt-0">{{ block_about.title }}</h2>
-        {{ block_services.body |> md }}
-
-        <a href="{{ block_about.link.url }}" class="button--link">{{ block_about.link.text }} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        {{ block_about.body |> md }}
+    </div>
+</section>
+<section id="portfolio" class="[ portfolio ] [] [ region ]">
+    <div class="wrapper">
+        <h2>Mijn werk</h2>
+    </div>
+</section>
+<section id="contact" class="[ contact ] [] [ region ]">
+    <div class="wrapper">
+        <h2>Contact</h2>
     </div>
 </section>

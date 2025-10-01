@@ -1,9 +1,17 @@
 @use "../abstracts" as *;
 
 .site-header {
-    background: var(--site-header-background);
+    background: var(--site-header-background, white);
     padding-inline: var(--site-header-padding-inline);
     padding-block: var(--site-header-padding-block, #{$site-header-padding-block});
+    
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
 
     &__inner {
         display: flex;

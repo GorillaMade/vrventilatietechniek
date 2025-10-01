@@ -13,32 +13,78 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const navLinks = document.querySelectorAll(".site-nav li a[href^='#']");
+  const sections = [];
 
-  const track = document.querySelector(".marquee__track");
+  navLinks.forEach(link => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) sections.push(target);
+  });
 
-  // Clone voor naadloze loop
-  track.innerHTML += track.innerHTML;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute("id");
+      const navLink = document.querySelector(`.site-nav a[href="#${id}"]`);
+      if (!navLink) return;
 
-  let x = 0;
-  const speed = 50; // pixels per seconde
-  let lastTimestamp = null;
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.removeAttribute("aria-current"));
+        navLink.setAttribute("aria-current", "page");
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: "0px 0px -50% 0px", // actieve sectie zodra hij 50% in beeld is
+    threshold: 0
+  });
 
-  function animate(timestamp) {
-    if (!lastTimestamp) lastTimestamp = timestamp;
-    const delta = (timestamp - lastTimestamp) / 1000; // seconden sinds vorig frame
-    lastTimestamp = timestamp;
-
-    x -= speed * delta; // beweging gebaseerd op echte tijd
-
-    // reset na 1 set
-    const halfWidth = track.scrollWidth / 2;
-    if (x <= -halfWidth) x = 0;
-
-    track.style.transform = `translateX(${x}px)`;
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
+  sections.forEach(section => observer.observe(section));
 });
+</script>
+
+
+<script>
+document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const dialogId = btn.dataset.dialog;
+        const dialog = document.getElementById(dialogId);
+        if (typeof dialog.showModal === "function") {
+            dialog.showModal();
+        } else {
+            alert("Uw browser ondersteunt geen dialog-element");
+        }
+    });
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const track = document.querySelector(".marquee__track");
+
+        // Clone voor naadloze loop
+        track.innerHTML += track.innerHTML;
+
+        let x = 0;
+        const speed = 50; // pixels per seconde
+        let lastTimestamp = null;
+
+        function animate(timestamp) {
+            if (!lastTimestamp) lastTimestamp = timestamp;
+            const delta = (timestamp - lastTimestamp) / 1000; // seconden sinds vorig frame
+            lastTimestamp = timestamp;
+
+            x -= speed * delta; // beweging gebaseerd op echte tijd
+
+            // reset na 1 set
+            const halfWidth = track.scrollWidth / 2;
+            if (x <= -halfWidth) x = 0;
+
+            track.style.transform = `translateX(${x}px)`;
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    });
 </script>

@@ -20,7 +20,11 @@
     padding: var(--space-xs);
     border-radius: var(--radius-xs, .125rem);
 
-    &:is(:hover),
+    &:hover {
+        color: var(--neutral-50);
+        background: var(--primary-300);
+    }
+
     &[aria-current="page"] {
         color: var(--neutral-50);
         background: var(--primary-600);

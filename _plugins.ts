@@ -61,7 +61,7 @@ export default function () {
         site.use(picture());
         site.use(transform_images());
         site.add([".svg"]);
-        site.add("/static/media");
+        site.add("static/media");
         site.use(inline());
         site.use(sitemap());
     }

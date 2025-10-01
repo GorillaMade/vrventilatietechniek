@@ -1,10 +1,16 @@
-.button {
-    --_button-foreground: var(--button-foreground);
-    --_button-background: var(--button-background);
-    --_button-font-size: var(--button-font-size);
-    --_button-font-weight: var(--button-font-weight);
-    --_button-padding: var(--button-padding);
+@use "../abstracts" as *;
 
+.button {
+    --_button-foreground: var(--button-foreground, #{$button-foreground});
+    --_button-foreground-hover: var(--button-foreground-hover, #{$button-foreground-hover});
+    --_button-background: var(--button-background, #{$button-background});
+    --_button-background-hover: var(--button-background-hover, #{$button-background-hover});
+    --_button-font-size: var(--button-font-size, #{$button-font-size});
+    --_button-font-weight: var(--button-font-weight, #{$button-font-weight});
+    --_button-padding: var(--button-padding, #{$button-padding});
+    --_button-radius: var(--button-radius, .75rem);
+
+    all: unset;
     display: inline-flex;
     color: var(--_button-foreground);
     background: var(--_button-background);
@@ -13,6 +19,13 @@
     padding: var(--_button-padding);
     cursor: pointer;
     text-decoration: none;
+    border-radius: var(--_button-radius);
+
+
+    &:is(:hover) {
+        --button-foreground: var(--_button-foreground-hover);
+        --button-background: var(--_button-background-hover);
+    }
 }
 
 
@@ -24,6 +37,9 @@
 .button--link {
     --_link-foreground: var(--link-foreground, inherit);
     --_link-foreground-hover: var(--link-foreground-hover, currentColor);
+    
+    all: unset;
+
     color: var(--_link-foreground);
     display: flex;
     align-items: center;
