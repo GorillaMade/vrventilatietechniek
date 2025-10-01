@@ -132,12 +132,38 @@
 </section>
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
-        <h2>Mijn werk</h2>
+        <h2>Mijn werk in beeld</h2>
     </div>
 </section>
-<section id="contact" class="[ contact ] [] [ region ]">
-    <div class="wrapper">
-        <h2>Contact</h2>
+<section id="contact" class="[ contact ] [] [ full-width-split-screen ]">
+    <div class="content color-primary-800 bg-primary-100">
+        <h2 class="mt-0">Contact</h2>
+        <p>Een goed werkend ventilatiesysteem draagt bij aan een gezond binnenklimaat. Ik staat klaar om al uw vragen te beantwoorden en samen te kijken naar de beste oplossing voor uw woning.</p>
+    </div>
+    <div class="flow color-neutral-50 bg-primary-600">
+        <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form">
+            <div class="form-group">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" required="" placeholder="Uw naam">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required="" placeholder="Uw e-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefoonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Bericht</label>
+                <textarea id="message" name="message" rows="5" required="" placeholder="Uw bericht"></textarea>
+            </div>
+
+            <button type="submit" class="button">Verstuur</button>
+        </form>
     </div>
 </section>
     </main>

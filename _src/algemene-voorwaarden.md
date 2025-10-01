@@ -1,5 +1,5 @@
 ---
-layout: "layouts/pages/page-wide.vto"
+layout: "layouts/pages/wide.vto"
 ---
 
 # Algemene Voorwaarden – VR Ventilatie Techniek

@@ -29,6 +29,28 @@
         --space-#{$space}: #{$value};
     }
 
+    // Radius
+    @each $prop, $value in $radius {
+        --radius-#{$prop}: #{$value};
+    }
+
+
+    // Shadows
+    @each $prop, $value in $shadows {
+        --shadow-#{$prop}: #{$value};
+    }
+
+    // Blur
+    @each $prop, $value in $blurs {
+        --blur-#{$prop}: #{$value};
+    }
+
+
+    // Layers
+    @each $prop, $value in $layers {
+        --layer-#{$prop}: #{$value};
+    }
+
     @each $color, $shades in $active-theme {
         @each $shade, $value in $shades {
             --#{$color}-#{$shade}: #{$value};

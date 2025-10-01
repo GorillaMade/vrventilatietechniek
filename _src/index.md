@@ -66,6 +66,14 @@ block_about:
     Bij VR Ventilatie Techniek staat kwaliteit, betrouwbaarheid en service voorop. Van advies en ontwerp tot installatie en onderhoud: wij begeleiden u bij elk stap. Met onze kennis en ervaring leveren wij op maat gemaakte oplossingen die passen bij uw gebouw en wensen.
 
     Kies voor VR Ventilatie Techniek en ervaar het verschil van een expert die meedenkt en resultaten levert.
+
+block_portfolio:
+  title: "Mijn werk in beeld"
+
+block_contact:
+  title: "Contact"
+  body: |
+    Een goed werkend ventilatiesysteem draagt bij aan een gezond binnenklimaat. Ik staat klaar om al uw vragen te beantwoorden en samen te kijken naar de beste oplossing voor uw woning.
 ---
 
 # Hello world

@@ -197,3 +197,16 @@ dialog {
 dialog::backdrop {
   background: rgba(0,0,0,0.6);
 }
+
+
+// -----------------------------------------------------------------------------
+// 
+// -----------------------------------------------------------------------------
+
+input,
+textarea {
+    width: 100%;
+    padding: var(--space-xs);
+    border: 1px solid var(--neutral-50);
+    border-radius: var(--radius-xs, .75rem);
+}
