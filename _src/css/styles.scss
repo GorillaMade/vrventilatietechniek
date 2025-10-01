@@ -191,7 +191,7 @@ dialog {
   border: none;
   border-radius: 10px;
   padding: var(--space-l);
-  max-width: 40rem;
+  max-width: 60rem;
 }
 
 dialog::backdrop {
@@ -203,10 +203,19 @@ dialog::backdrop {
 // 
 // -----------------------------------------------------------------------------
 
+form {
+    width: 100%;
+}
+
 input,
 textarea {
     width: 100%;
     padding: var(--space-xs);
     border: 1px solid var(--neutral-50);
     border-radius: var(--radius-xs, .75rem);
+}
+
+textarea {
+    min-width: 100%;
+    resize: vertical;
 }

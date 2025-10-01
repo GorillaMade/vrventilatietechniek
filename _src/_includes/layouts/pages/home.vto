@@ -4,10 +4,14 @@ layout: "layouts/base.vto"
 
 <section class="[ hero ] [ stack ] []">
     <img src="{{ block_hero.image.path }}" alt="{{ block_hero.image.desc }}">
-    <div class="hero__inner wrapper flow region">
-        <h1 class="mt-0">{{ block_hero.title }}</h1>
-        <p>Van advies tot installatie: alles voor een optimaal binnenklimaat.</p>
-        <a href="{{ block_hero.link.url }}" class="button">{{ block_hero.link.text }}</a>
+    <div class="hero__inner wrapper wrapper--wide region">
+        <div class="flow">
+            <h1 class=""">{{ block_hero.title }}</h1>
+            {{ block_hero.body |> md }}
+            <div>
+                <a href="{{ block_hero.link.url }}" class="button">{{ block_hero.link.text }}</a>
+            </div>
+        </div>
     </div>
 </section>
 <section id="diensten" class="[ services ] [] [ region ]">
@@ -62,8 +66,8 @@ layout: "layouts/base.vto"
         <h2 class="mt-0">{{ block_contact.title }}</h2>
         {{ block_contact.body |> md }}
     </div>
-    <div class="flow color-neutral-50 bg-primary-600">
-        <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form">
+    <div class="flow color-primary-900 bg-primary-200">
+        <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form flow">
             <div class="form-group">
                 <label for="name">Naam</label>
                 <input type="text" id="name" name="name" required placeholder="Uw naam">

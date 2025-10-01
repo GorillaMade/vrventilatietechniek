@@ -12,6 +12,7 @@ menu:
 
 block_hero:
   title: "Schone lucht, slimme ventilatie."
+  body: "Van advies tot installatie: alles voor een optimaal binnenklimaat."
   image:
     path: "https://media.gettyimages.com/id/1148661849/photo/beautiful-young-asian-woman-drinking-coffee-and-enjoying-fresh-air-on-balcony-in-the-morning.jpg?s=612x612&w=0&k=20&c=641PanVR6AkbZfSRrPfXfd3WZPD4BnNttSZbVFC43eQ="
     desc: "Korte beschrijving van de foto"
