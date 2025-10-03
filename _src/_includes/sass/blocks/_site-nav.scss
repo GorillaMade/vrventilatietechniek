@@ -20,15 +20,15 @@
     padding: var(--space-xs);
     border-radius: var(--radius-xs);
 
-    &:hover {
+    &:is(:hover) {
         color: var(--neutral-50);
         background: var(--primary-300);
     }
+}
 
-    &:has([aria-current="page"]) {
-        color: var(--neutral-50);
-        background: var(--primary-600);
-    }
+.site-nav li a:has([aria-current="page"]) {
+    color: var(--neutral-50);
+    background: var(--primary-900);
 }
 
 
