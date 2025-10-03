@@ -18,6 +18,7 @@ import picture from "lume/plugins/picture.ts";
 import transform_images from "lume/plugins/transform_images.ts";
 import inline from "lume/plugins/inline.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 import { nl } from "npm:date-fns/locale/nl";
 
 
@@ -61,7 +62,7 @@ export default function () {
         site.use(picture());
         site.use(transform_images());
         site.add([".svg"]);
-        site.add("static/media");
+        site.add("media");
         site.use(inline());
         site.use(sitemap());
     }

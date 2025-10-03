@@ -18,21 +18,18 @@
     text-decoration: none;
     color: var(--neutral-400);
     padding: var(--space-xs);
-    border-radius: var(--radius-xs, .125rem);
+    border-radius: var(--radius-xs);
 
     &:hover {
         color: var(--neutral-50);
         background: var(--primary-300);
     }
 
-    &[aria-current="page"] {
+    &:has([aria-current="page"]) {
         color: var(--neutral-50);
         background: var(--primary-600);
     }
 }
-
-
-
 
 
 @media (min-width: 975px) {

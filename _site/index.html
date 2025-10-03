@@ -29,6 +29,9 @@
         <nav class="site-nav">
     <ul class="site-nav__list" role="navigation">
         <li>
+            <a href="#hero">Home</a>
+        </li>
+        <li>
             <a href="#over-mij">Over mij</a>
         </li>
         <li>
@@ -45,7 +48,7 @@
     </div>
 </header>
     <main id="main">
-    <section class="[ hero ] [ stack ] []">
+    <section id="hero" class="[ hero ] [ stack ] []">
     <img src="https://media.gettyimages.com/id/1148661849/photo/beautiful-young-asian-woman-drinking-coffee-and-enjoying-fresh-air-on-balcony-in-the-morning.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=641PanVR6AkbZfSRrPfXfd3WZPD4BnNttSZbVFC43eQ=" alt="Korte beschrijving van de foto">
     <div class="hero__inner wrapper wrapper--wide region">
         <div class="flow">
@@ -71,7 +74,7 @@
                     <!-- Dialog element -->
                     <dialog id="dialog-1">
                         <form class="flow" method="dialog">
-                            <h3 class="mt-0">Inspectie</h3>
+                            <h3 class="mt-0 color-primary-900">Inspectie</h3>
                             <p>Door middel van een grondige inspectie brengen wij de staat en werking van uw ventilatiesysteem in kaart. Vaak merkt u niet direct dat er vervuiling of een defect aanwezig is, terwijl dit wél grote gevolgen kan hebben voor luchtkwaliteit en energiekosten. Met onze inspecties ontdekt u tijdig problemen en voorkomt u onnodige reparaties, waardoor u verzekerd blijft van frisse en gezonde lucht.</p>
                             <div>
                                 <button class="button">Sluiten</button>
@@ -89,7 +92,7 @@
                     <!-- Dialog element -->
                     <dialog id="dialog-2">
                         <form class="flow" method="dialog">
-                            <h3 class="mt-0">Installatie</h3>
+                            <h3 class="mt-0 color-primary-900">Installatie</h3>
                             <p>Wij zorgen voor de professionele installatie van ventilatiesystemen die perfect aansluiten op uw woning of bedrijfspand. Een slecht geïnstalleerd systeem kan leiden tot vochtproblemen, schimmelvorming en ongezonde lucht. Met onze vakkundige aanpak bent u verzekerd van een optimale luchtcirculatie, energiezuinig functioneren en een gezond binnenklimaat.</p>
                             <div>
                                 <button class="button">Sluiten</button>
@@ -107,7 +110,7 @@
                     <!-- Dialog element -->
                     <dialog id="dialog-3">
                         <form class="flow" method="dialog">
-                            <h3 class="mt-0">Onderhoud</h3>
+                            <h3 class="mt-0 color-primary-900">Onderhoud</h3>
                             <p>Regelmatig onderhoud houdt uw ventilatiesysteem schoon, efficiënt en betrouwbaar. Zonder onderhoud hopen stof en vuil zich op, waardoor de luchtkwaliteit afneemt en het systeem meer energie verbruikt. Met onze onderhoudsservice verlengt u de levensduur van uw installatie, bespaart u op kosten en creëert u een blijvend gezond leef- en werkklimaat.</p>
                             <div>
                                 <button class="button">Sluiten</button>
@@ -120,11 +123,11 @@
 </section>
 <section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
     <div class="marquee__track">
-            <div class="logo"><img src="static/media/logos/brink-logo.png" alt="Brink"></div>
-            <div class="logo"><img src="static/media/logos/duco-logo.png" alt="Duco"></div>
-            <div class="logo"><img src="static/media/logos/itho-logo.png" alt="Itho"></div>
-            <div class="logo"><img src="static/media/logos/orcon-logo.png" alt="Orcon"></div>
-            <div class="logo"><img src="static/media/logos/zehnder-logo.png" alt="Zehnder"></div>
+            <div class="logo"><img src="media/logos/brink-logo.png" alt="Brink"></div>
+            <div class="logo"><img src="media/logos/duco-logo.png" alt="Duco"></div>
+            <div class="logo"><img src="media/logos/itho-logo.png" alt="Itho"></div>
+            <div class="logo"><img src="media/logos/orcon-logo.png" alt="Orcon"></div>
+            <div class="logo"><img src="media/logos/zehnder-logo.png" alt="Zehnder"></div>
     </div>
 </section>
 <section id="over-mij" class="[ about ] [] [ full-width-split-screen ]">
@@ -138,8 +141,87 @@
 </section>
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
-        <h2 class="color-primary-500">Mijn werk in beeld</h2>
+        <h2 class="mt-0 color-primary-500">Mijn werk in beeld</h2>
+        <ul class="grid" data-layout="thirds" role="list">
+                <li>
+
+                    <div class="ba-slider">
+                        <img src="https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+                        <!-- BEFORE (bovenop, afgesneden door slider) -->
+                        <div class="resize">
+                            <img src="https://images.unsplash.com/photo-1605434896752-b7566eb11bb8?q=80&amp;w=2072&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+
+                        <!-- Handvat -->
+                        <span class="handle">
+                            <span class="circle">
+                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            </span>
+                        </span>
+
+                        <!-- Caption overlay -->
+                        <div class="caption">
+                            <h3>Badkamer renovatie - Ventilatie upgrade</h3>
+                            <p>Van verstopte afzuiging naar optimale luchtcirculatie</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                    <div class="ba-slider">
+                        <img src="https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+                        <!-- BEFORE (bovenop, afgesneden door slider) -->
+                        <div class="resize">
+                            <img src="https://images.unsplash.com/photo-1605434896752-b7566eb11bb8?q=80&amp;w=2072&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+
+                        <!-- Handvat -->
+                        <span class="handle">
+                            <span class="circle">
+                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            </span>
+                        </span>
+
+                        <!-- Caption overlay -->
+                        <div class="caption">
+                            <h3>Badkamer renovatie - Ventilatie upgrade</h3>
+                            <p>Van verstopte afzuiging naar optimale luchtcirculatie</p>
+                        </div>
+                    </div>
+                </li>
+        </ul>
     </div>
+</section>
+<section class="[ mission ] [ ] [ full-width-split-screen ]">
+            <div class="content">
+                <h2 class="mt-0 color-primary-500">Gezondheid &amp; comfort centraal</h2>
+                <p>
+                    Onze missie is om ieder huishouden te voorzien van een gezond en comfortabel binnenklimaat. Wij geloven dat frisse lucht en goed werkende ventilatie de basis zijn voor een gezonder leven. Daarom zorgen wij voor deskundige installatie, nauwkeurige inspectie en betrouwbaar onderhoud – zodat u en uw gezin zorgeloos kunnen ademen.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1574334292321-4844f63aefef?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+</section>
+<section class="[ lasting ] [] [ full-width-split-screen ]">
+
+            <img src="https://images.unsplash.com/photo-1706470251325-21714f1bbed1?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="content">
+                <h2 class="mt-0 color-primary-500">Duurzaamheid &amp; toekomstgericht</h2>
+                <p>
+                    Wij denken niet alleen aan vandaag, maar ook aan morgen. Daarom werken wij met energiezuinige en duurzame oplossingen die bijdragen aan een beter milieu en lagere energiekosten. Door preventief onderhoud en het toepassen van moderne technieken verlengen wij de levensduur van uw ventilatiesysteem en verkleinen we samen de ecologische voetafdruk. Zo combineren we comfort met verantwoordelijkheid voor de toekomst.
+                </p>
+            </div>
 </section>
 <section id="contact" class="[ contact ] [] [ full-width-split-screen ]">
     <div class="content bg-primary-50 color-primary-800">
@@ -188,7 +270,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".site-nav li a[href^='#']");
+  const navLinks = document.querySelectorAll(".site-nav ul li a[href^='#']");
   const sections = [];
 
   navLinks.forEach(link => {
@@ -199,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.site-nav li a[href="#${id}"]`);
+      const navLink = document.querySelector(`.site-nav ul li a[href="#${id}"]`);
       if (!navLink) return;
 
       if (entry.isIntersecting) {
@@ -262,6 +344,48 @@ document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
 
         requestAnimationFrame(animate);
     });
+</script>
+
+<script>
+document.querySelectorAll(".ba-slider").forEach(function(slider) {
+  const handle = slider.querySelector(".handle");
+  const resize = slider.querySelector(".resize");
+
+  function moveSlider(x) {
+    const rect = slider.getBoundingClientRect();
+    let position = x - rect.left;
+    if (position < 0) position = 0;
+    if (position > rect.width) position = rect.width;
+
+    handle.style.left = position + "px";
+    resize.style.width = position + "px";
+  }
+
+  // Desktop slepen
+  slider.addEventListener("mousedown", function(e) {
+    e.preventDefault();
+    const move = (ev) => moveSlider(ev.pageX);
+    const stop = () => {
+      window.removeEventListener("mousemove", move);
+      window.removeEventListener("mouseup", stop);
+    };
+    window.addEventListener("mousemove", move);
+    window.addEventListener("mouseup", stop);
+  });
+
+  // Mobiel slepen
+  slider.addEventListener("touchstart", function(e) {
+    const move = (ev) => {
+      moveSlider(ev.touches[0].pageX);
+    };
+    const stop = () => {
+      window.removeEventListener("touchmove", move);
+      window.removeEventListener("touchend", stop);
+    };
+    window.addEventListener("touchmove", move, { passive: false });
+    window.addEventListener("touchend", stop);
+  });
+});
 </script>
 
 </body></html>

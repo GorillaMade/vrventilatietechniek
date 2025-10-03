@@ -2,7 +2,7 @@
 layout: "layouts/base.vto"
 ---
 
-<section class="[ hero ] [ stack ] []">
+<section id="hero" class="[ hero ] [ stack ] []">
     <img src="{{ block_hero.image.path }}" alt="{{ block_hero.image.desc }}">
     <div class="hero__inner wrapper wrapper--wide region">
         <div class="flow">
@@ -30,7 +30,7 @@ layout: "layouts/base.vto"
                     <!-- Dialog element -->
                     <dialog id="dialog-{{ service.id }}">
                         <form class="flow" method="dialog">
-                            <h3 class="mt-0">{{ service.title }}</h3>
+                            <h3 class="mt-0 color-primary-900">{{ service.title }}</h3>
                             {{ service.content |> md }}
                             <div>
                                 <button class="button">Sluiten</button>
@@ -58,8 +58,61 @@ layout: "layouts/base.vto"
 </section>
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
-        <h2 class="color-primary-500">{{ block_portfolio.title }}</h2>
+        <h2 class="mt-0 color-primary-500">{{ block_portfolio.title }}</h2>
+        <ul class="grid" data-layout="thirds" role="list">
+            {{ set portfolio = search.pages("type=portfolio") }}
+            {{ for item of portfolio }}
+                <li>
+
+                    <div class="ba-slider">
+                        <img src="{{ item.slide.after.image }}" alt="{{ item.slide.after.description }}">
+
+                        <!-- BEFORE (bovenop, afgesneden door slider) -->
+                        <div class="resize">
+                            <img src="{{ item.slide.before.image }}" alt="{{ item.slide.before.description }}">
+                        </div>
+
+                        <!-- Handvat -->
+                        <span class="handle">
+                            <span class="circle">
+                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </span>
+                        </span>
+
+                        <!-- Caption overlay -->
+                        <div class="caption">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                </li>
+            {{ /for }}
+        </ul>
     </div>
+</section>
+<section class="[ mission ] [ ] [ full-width-split-screen ]">
+            <div class="content">
+                <h2 class="mt-0 color-primary-500">Gezondheid & comfort centraal</h2>
+                <p>
+                    Onze missie is om ieder huishouden te voorzien van een gezond en comfortabel binnenklimaat. Wij geloven dat frisse lucht en goed werkende ventilatie de basis zijn voor een gezonder leven. Daarom zorgen wij voor deskundige installatie, nauwkeurige inspectie en betrouwbaar onderhoud – zodat u en uw gezin zorgeloos kunnen ademen.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1574334292321-4844f63aefef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+</section>
+<section class="[ lasting ] [] [ full-width-split-screen ]">
+
+            <img src="https://images.unsplash.com/photo-1706470251325-21714f1bbed1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="content">
+                <h2 class="mt-0 color-primary-500">Duurzaamheid & toekomstgericht</h2>
+                <p>
+                    Wij denken niet alleen aan vandaag, maar ook aan morgen. Daarom werken wij met energiezuinige en duurzame oplossingen die bijdragen aan een beter milieu en lagere energiekosten. Door preventief onderhoud en het toepassen van moderne technieken verlengen wij de levensduur van uw ventilatiesysteem en verkleinen we samen de ecologische voetafdruk. Zo combineren we comfort met verantwoordelijkheid voor de toekomst.
+                </p>
+            </div>
 </section>
 <section id="contact" class="[ contact ] [] [ full-width-split-screen ]">
     <div class="content bg-primary-50 color-primary-800">

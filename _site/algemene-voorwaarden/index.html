@@ -29,6 +29,9 @@
         <nav class="site-nav">
     <ul class="site-nav__list" role="navigation">
         <li>
+            <a href="#hero">Home</a>
+        </li>
+        <li>
             <a href="#over-mij">Over mij</a>
         </li>
         <li>
@@ -132,7 +135,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".site-nav li a[href^='#']");
+  const navLinks = document.querySelectorAll(".site-nav ul li a[href^='#']");
   const sections = [];
 
   navLinks.forEach(link => {
@@ -143,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.site-nav li a[href="#${id}"]`);
+      const navLink = document.querySelector(`.site-nav ul li a[href="#${id}"]`);
       if (!navLink) return;
 
       if (entry.isIntersecting) {
@@ -206,6 +209,48 @@ document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
 
         requestAnimationFrame(animate);
     });
+</script>
+
+<script>
+document.querySelectorAll(".ba-slider").forEach(function(slider) {
+  const handle = slider.querySelector(".handle");
+  const resize = slider.querySelector(".resize");
+
+  function moveSlider(x) {
+    const rect = slider.getBoundingClientRect();
+    let position = x - rect.left;
+    if (position < 0) position = 0;
+    if (position > rect.width) position = rect.width;
+
+    handle.style.left = position + "px";
+    resize.style.width = position + "px";
+  }
+
+  // Desktop slepen
+  slider.addEventListener("mousedown", function(e) {
+    e.preventDefault();
+    const move = (ev) => moveSlider(ev.pageX);
+    const stop = () => {
+      window.removeEventListener("mousemove", move);
+      window.removeEventListener("mouseup", stop);
+    };
+    window.addEventListener("mousemove", move);
+    window.addEventListener("mouseup", stop);
+  });
+
+  // Mobiel slepen
+  slider.addEventListener("touchstart", function(e) {
+    const move = (ev) => {
+      moveSlider(ev.touches[0].pageX);
+    };
+    const stop = () => {
+      window.removeEventListener("touchmove", move);
+      window.removeEventListener("touchend", stop);
+    };
+    window.addEventListener("touchmove", move, { passive: false });
+    window.addEventListener("touchend", stop);
+  });
+});
 </script>
 
 </body></html>

@@ -45,15 +45,15 @@ block_marquee:
   enabled: true
   list:
     - name: "Brink"
-      image: "static/media/logos/brink-logo.png"
+      image: "media/logos/brink-logo.png"
     - name: "Duco"
-      image: "static/media/logos/duco-logo.png"
+      image: "media/logos/duco-logo.png"
     - name: "Itho"
-      image: "static/media/logos/itho-logo.png"
+      image: "media/logos/itho-logo.png"
     - name: "Orcon"
-      image: "static/media/logos/orcon-logo.png"
+      image: "media/logos/orcon-logo.png"
     - name: "Zehnder"
-      image: "static/media/logos/zehnder-logo.png"
+      image: "media/logos/zehnder-logo.png"
     
 
 block_about:

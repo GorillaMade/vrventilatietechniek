@@ -1,0 +1,40 @@
+<section class="marquee bg-neutral-100 region">
+  <div class="marquee__track" id="marquee">
+    {logos.map((path) => (
+      <div class="logo" key={path}>
+        <img src={`/${path.replace(/^media\//, "")}`} alt="Logo" />
+      </div>
+    ))}
+    {logos.map((path) => (
+      <div class="logo" key={path + "-dup"}>
+        <img src={`/${path.replace(/^media\//, "")}`} alt="Logo" />
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const track = document.getElementById("marquee");
+    let x = 0;
+    let last = null;
+    const speed = 50; // px/sec
+
+    function animate(ts) {
+      if (!last) last = ts;
+      const delta = (ts - last) / 1000;
+      last = ts;
+
+      x -= speed * delta;
+      const halfWidth = track.scrollWidth / 2;
+      if (x <= -halfWidth) x = 0;
+
+      track.style.transform = `translateX(${x}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  });
+</script>
