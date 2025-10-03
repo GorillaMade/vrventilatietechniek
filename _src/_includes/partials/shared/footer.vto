@@ -104,8 +104,8 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     resize.style.width = position + "px";
   }
 
-  // Desktop slepen
-  slider.addEventListener("mousedown", function(e) {
+  // Slepen met muis (desktop) alleen via handle
+  handle.addEventListener("mousedown", function(e) {
     e.preventDefault();
     const move = (ev) => moveSlider(ev.pageX);
     const stop = () => {
@@ -116,11 +116,9 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     window.addEventListener("mouseup", stop);
   });
 
-  // Mobiel slepen
-  slider.addEventListener("touchstart", function(e) {
-    const move = (ev) => {
-      moveSlider(ev.touches[0].pageX);
-    };
+  // Slepen met vinger (mobiel) alleen via handle
+  handle.addEventListener("touchstart", function(e) {
+    const move = (ev) => moveSlider(ev.touches[0].pageX);
     const stop = () => {
       window.removeEventListener("touchmove", move);
       window.removeEventListener("touchend", stop);

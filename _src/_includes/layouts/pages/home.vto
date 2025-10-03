@@ -59,7 +59,7 @@ layout: "layouts/base.vto"
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
         <h2 class="mt-0 color-primary-500">{{ block_portfolio.title }}</h2>
-        <ul class="grid" data-layout="thirds" role="list">
+        <ul class="grid" data-layout="halves" role="list">
             {{ set portfolio = search.pages("type=portfolio") }}
             {{ for item of portfolio }}
                 <li>

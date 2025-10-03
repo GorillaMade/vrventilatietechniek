@@ -142,7 +142,36 @@
 <section id="portfolio" class="[ portfolio ] [] [ region ]">
     <div class="wrapper">
         <h2 class="mt-0 color-primary-500">Mijn werk in beeld</h2>
-        <ul class="grid" data-layout="thirds" role="list">
+        <ul class="grid" data-layout="halves" role="list">
+                <li>
+
+                    <div class="ba-slider">
+                        <img src="https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+                        <!-- BEFORE (bovenop, afgesneden door slider) -->
+                        <div class="resize">
+                            <img src="https://images.unsplash.com/photo-1605434896752-b7566eb11bb8?q=80&amp;w=2072&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+
+                        <!-- Handvat -->
+                        <span class="handle">
+                            <span class="circle">
+                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            </span>
+                        </span>
+
+                        <!-- Caption overlay -->
+                        <div class="caption">
+                            <h3>Badkamer renovatie - Ventilatie upgrade</h3>
+                            <p>Van verstopte afzuiging naar optimale luchtcirculatie</p>
+                        </div>
+                    </div>
+                </li>
                 <li>
 
                     <div class="ba-slider">
@@ -361,8 +390,8 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     resize.style.width = position + "px";
   }
 
-  // Desktop slepen
-  slider.addEventListener("mousedown", function(e) {
+  // Slepen met muis (desktop) alleen via handle
+  handle.addEventListener("mousedown", function(e) {
     e.preventDefault();
     const move = (ev) => moveSlider(ev.pageX);
     const stop = () => {
@@ -373,11 +402,9 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     window.addEventListener("mouseup", stop);
   });
 
-  // Mobiel slepen
-  slider.addEventListener("touchstart", function(e) {
-    const move = (ev) => {
-      moveSlider(ev.touches[0].pageX);
-    };
+  // Slepen met vinger (mobiel) alleen via handle
+  handle.addEventListener("touchstart", function(e) {
+    const move = (ev) => moveSlider(ev.touches[0].pageX);
     const stop = () => {
       window.removeEventListener("touchmove", move);
       window.removeEventListener("touchend", stop);
