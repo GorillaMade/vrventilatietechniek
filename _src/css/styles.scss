@@ -123,7 +123,7 @@ h3 {
 .marquee {
   overflow: hidden;
   width: 100%;
-  padding: 12px 0;
+  padding: var(--space-s) 0;
 
   // mask / fade aan beide zijkanten
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -156,7 +156,7 @@ h3 {
 
 .marquee__track {
   display: flex;
-  gap: var(--space-m);
+  //gap: var(--space-m);
   flex-wrap: nowrap;
   will-change: transform;
 }

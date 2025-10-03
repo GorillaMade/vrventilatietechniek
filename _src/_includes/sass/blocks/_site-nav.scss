@@ -26,9 +26,15 @@
     }
 }
 
-.site-nav li a:has([aria-current="page"]) {
+.site-nav li a[aria-current="page"] {
     color: var(--neutral-50);
     background: var(--primary-900);
+}
+
+
+
+.site-nav.open {
+    display: block;
 }
 
 

@@ -135,6 +135,19 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".site-nav");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    nav.classList.toggle("open");
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".site-nav ul li a[href^='#']");
   const sections = [];
 
@@ -180,36 +193,40 @@ document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-        const track = document.querySelector(".marquee__track");
+  const track = document.querySelector(".marquee__track");
+  let content = track.innerHTML;
 
-        // Clone voor naadloze loop
-        track.innerHTML += track.innerHTML;
+  // Vul track op tot minstens 2x viewportbreedte
+  while (track.scrollWidth < window.innerWidth * 2) {
+    track.innerHTML += content;
+  }
 
-        let x = 0;
-        const speed = 50; // pixels per seconde
-        let lastTimestamp = null;
+  let x = 0;
+  const speed = 80; // pixels per seconde
+  let last = null;
 
-        function animate(timestamp) {
-            if (!lastTimestamp) lastTimestamp = timestamp;
-            const delta = (timestamp - lastTimestamp) / 1000; // seconden sinds vorig frame
-            lastTimestamp = timestamp;
+  function animate(timestamp) {
+    if (!last) last = timestamp;
+    const delta = (timestamp - last) / 1000;
+    last = timestamp;
 
-            x -= speed * delta; // beweging gebaseerd op echte tijd
+    x -= speed * delta;
+    const width = track.scrollWidth / 2; // omdat we alles minstens 2x hebben
 
-            // reset na 1 set
-            const halfWidth = track.scrollWidth / 2;
-            if (x <= -halfWidth) x = 0;
+    // Scroll moduleren -> nooit jump
+    x = ((x % width) + width) % width;
 
-            track.style.transform = `translateX(${x}px)`;
-            requestAnimationFrame(animate);
-        }
+    track.style.transform = `translateX(${x * -1}px)`;
+    requestAnimationFrame(animate);
+  }
 
-        requestAnimationFrame(animate);
-    });
+  requestAnimationFrame(animate);
+});
 </script>
+
 
 <script>
 document.querySelectorAll(".ba-slider").forEach(slider => {
