@@ -230,7 +230,7 @@ document.querySelectorAll(".ba-slider").forEach(slider => {
     handle.style.left = position + "px";
   }
 
-  // Desktop
+  // Desktop drag
   handle.addEventListener("mousedown", e => {
     e.preventDefault();
     const move = ev => moveSlider(ev.pageX);
@@ -242,8 +242,9 @@ document.querySelectorAll(".ba-slider").forEach(slider => {
     window.addEventListener("mouseup", stop);
   });
 
-  // Mobiel
+  // Mobiel drag
   handle.addEventListener("touchstart", e => {
+    e.preventDefault();
     const move = ev => moveSlider(ev.touches[0].pageX);
     const stop = () => {
       window.removeEventListener("touchmove", move);
@@ -253,7 +254,6 @@ document.querySelectorAll(".ba-slider").forEach(slider => {
     window.addEventListener("touchend", stop);
   });
 });
-
 </script>
 
 </body></html>
