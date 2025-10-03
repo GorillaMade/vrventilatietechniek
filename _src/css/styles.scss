@@ -187,14 +187,15 @@ h3 {
 // -----------------------------------------------------------------------------
 
 dialog {
-  border: none;
-  border-radius: var(--radius-s);
-  padding: var(--space-l);
-  max-width: 50rem;
+    border: none;
+    border-radius: var(--radius-s);
+    padding: var(--space-l);
+    max-width: 50rem;
+    margin-inline: var(--space-l);
 }
 
 dialog::backdrop {
-  background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.6);
 }
 
 
