@@ -212,9 +212,9 @@ document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
 </script>
 
 <script>
-document.querySelectorAll(".ba-slider").forEach(function(slider) {
+document.querySelectorAll(".ba-slider").forEach(slider => {
   const handle = slider.querySelector(".handle");
-  const resize = slider.querySelector(".resize");
+  const before = slider.querySelector(".before");
 
   function moveSlider(x) {
     const rect = slider.getBoundingClientRect();
@@ -222,14 +222,18 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     if (position < 0) position = 0;
     if (position > rect.width) position = rect.width;
 
+    // percentage van slider
+    const pct = (position / rect.width) * 100;
+
+    // clip-path aanpassen zodat before image zichtbaar wordt tot slider positie
+    before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
     handle.style.left = position + "px";
-    resize.style.width = position + "px";
   }
 
-  // Slepen met muis (desktop) alleen via handle
-  handle.addEventListener("mousedown", function(e) {
+  // Desktop
+  handle.addEventListener("mousedown", e => {
     e.preventDefault();
-    const move = (ev) => moveSlider(ev.pageX);
+    const move = ev => moveSlider(ev.pageX);
     const stop = () => {
       window.removeEventListener("mousemove", move);
       window.removeEventListener("mouseup", stop);
@@ -238,9 +242,9 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     window.addEventListener("mouseup", stop);
   });
 
-  // Slepen met vinger (mobiel) alleen via handle
-  handle.addEventListener("touchstart", function(e) {
-    const move = (ev) => moveSlider(ev.touches[0].pageX);
+  // Mobiel
+  handle.addEventListener("touchstart", e => {
+    const move = ev => moveSlider(ev.touches[0].pageX);
     const stop = () => {
       window.removeEventListener("touchmove", move);
       window.removeEventListener("touchend", stop);
@@ -249,6 +253,7 @@ document.querySelectorAll(".ba-slider").forEach(function(slider) {
     window.addEventListener("touchend", stop);
   });
 });
+
 </script>
 
 </body></html>

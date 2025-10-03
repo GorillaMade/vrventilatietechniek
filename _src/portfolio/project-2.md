@@ -1,5 +1,5 @@
 ---
-title: "Badkamer renovatie - Ventilatie upgrade"
+title: "Ventilatie upgrade"
 description: "Van verstopte afzuiging naar optimale luchtcirculatie"
 
 slide:
