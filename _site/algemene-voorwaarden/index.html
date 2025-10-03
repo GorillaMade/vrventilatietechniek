@@ -123,140 +123,96 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Hamburger toggle
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector(".site-nav");
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("open");
+      nav.classList.toggle("open");
+    });
+  }
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("open");
-    nav.classList.toggle("open");
-  });
-});
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+  // 2. Active nav highlight
   const navLinks = document.querySelectorAll(".site-nav ul li a[href^='#']");
   const sections = [];
-
   navLinks.forEach(link => {
     const target = document.querySelector(link.getAttribute("href"));
     if (target) sections.push(target);
   });
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute("id");
       const navLink = document.querySelector(`.site-nav ul li a[href="#${id}"]`);
-      if (!navLink) return;
-
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && navLink) {
         navLinks.forEach(link => link.removeAttribute("aria-current"));
         navLink.setAttribute("aria-current", "page");
       }
     });
-  }, {
-    root: null,
-    rootMargin: "0px 0px -50% 0px", // actieve sectie zodra hij 50% in beeld is
-    threshold: 0
+  }, { rootMargin: "0px 0px -50% 0px" });
+  sections.forEach(section => observer.observe(section));
+
+  // 3. Dialog openen
+  document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dialog = document.getElementById(btn.dataset.dialog);
+      if (dialog?.showModal) dialog.showModal();
+      else alert("Uw browser ondersteunt geen dialog-element");
+    });
   });
 
-  sections.forEach(section => observer.observe(section));
-});
-</script>
-
-
-<script>
-document.querySelectorAll('.button--link[data-dialog]').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const dialogId = btn.dataset.dialog;
-        const dialog = document.getElementById(dialogId);
-        if (typeof dialog.showModal === "function") {
-            dialog.showModal();
-        } else {
-            alert("Uw browser ondersteunt geen dialog-element");
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
+  // 4. Marquee
   const track = document.querySelector(".marquee__track");
-  let content = track.innerHTML;
-
-  // Vul track op tot minstens 2x viewportbreedte
-  while (track.scrollWidth < window.innerWidth * 2) {
-    track.innerHTML += content;
-  }
-
-  let x = 0;
-  const speed = 80; // pixels per seconde
-  let last = null;
-
-  function animate(timestamp) {
-    if (!last) last = timestamp;
-    const delta = (timestamp - last) / 1000;
-    last = timestamp;
-
-    x -= speed * delta;
-    const width = track.scrollWidth / 2; // omdat we alles minstens 2x hebben
-
-    // Scroll moduleren -> nooit jump
-    x = ((x % width) + width) % width;
-
-    track.style.transform = `translateX(${x * -1}px)`;
+  if (track) {
+    let content = track.innerHTML;
+    while (track.scrollWidth < window.innerWidth * 2) {
+      track.innerHTML += content;
+    }
+    let x = 0, speed = 80, last = null;
+    function animate(ts) {
+      if (!last) last = ts;
+      const delta = (ts - last) / 1000;
+      last = ts;
+      x -= speed * delta;
+      const width = track.scrollWidth / 2;
+      x = ((x % width) + width) % width;
+      track.style.transform = `translateX(${x * -1}px)`;
+      requestAnimationFrame(animate);
+    }
     requestAnimationFrame(animate);
   }
 
-  requestAnimationFrame(animate);
-});
-</script>
-
-
-<script>
-document.querySelectorAll(".ba-slider").forEach(slider => {
-  const handle = slider.querySelector(".handle");
-  const before = slider.querySelector(".before");
-
-  function moveSlider(x) {
-    const rect = slider.getBoundingClientRect();
-    let position = x - rect.left;
-    if (position < 0) position = 0;
-    if (position > rect.width) position = rect.width;
-
-    // percentage van slider
-    const pct = (position / rect.width) * 100;
-
-    // clip-path aanpassen zodat before image zichtbaar wordt tot slider positie
-    before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-    handle.style.left = position + "px";
-  }
-
-  // Desktop drag
-  handle.addEventListener("mousedown", e => {
-    e.preventDefault();
-    const move = ev => moveSlider(ev.pageX);
-    const stop = () => {
-      window.removeEventListener("mousemove", move);
-      window.removeEventListener("mouseup", stop);
-    };
-    window.addEventListener("mousemove", move);
-    window.addEventListener("mouseup", stop);
-  });
-
-  // Mobiel drag
-  handle.addEventListener("touchstart", e => {
-    e.preventDefault();
-    const move = ev => moveSlider(ev.touches[0].pageX);
-    const stop = () => {
-      window.removeEventListener("touchmove", move);
-      window.removeEventListener("touchend", stop);
-    };
-    window.addEventListener("touchmove", move, { passive: false });
-    window.addEventListener("touchend", stop);
+  // 5. Before/After sliders
+  document.querySelectorAll(".ba-slider").forEach(slider => {
+    const handle = slider.querySelector(".handle");
+    const before = slider.querySelector(".before");
+    function moveSlider(x) {
+      const rect = slider.getBoundingClientRect();
+      let pos = Math.max(0, Math.min(x - rect.left, rect.width));
+      const pct = (pos / rect.width) * 100;
+      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pos + "px";
+    }
+    handle.addEventListener("mousedown", e => {
+      e.preventDefault();
+      const move = ev => moveSlider(ev.pageX);
+      const stop = () => {
+        window.removeEventListener("mousemove", move);
+        window.removeEventListener("mouseup", stop);
+      };
+      window.addEventListener("mousemove", move);
+      window.addEventListener("mouseup", stop);
+    });
+    handle.addEventListener("touchstart", e => {
+      e.preventDefault();
+      const move = ev => moveSlider(ev.touches[0].pageX);
+      const stop = () => {
+        window.removeEventListener("touchmove", move);
+        window.removeEventListener("touchend", stop);
+      };
+      window.addEventListener("touchmove", move, { passive: false });
+      window.addEventListener("touchend", stop);
+    });
   });
 });
 </script>
