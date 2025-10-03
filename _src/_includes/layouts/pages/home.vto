@@ -114,34 +114,35 @@ layout: "layouts/base.vto"
                 </p>
             </div>
 </section>
-<section id="contact" class="[ contact ] [] [ full-width-split-screen ]">
-    <div class="content bg-primary-50 color-primary-800">
-        <h2 class="mt-0 color-primary-500">{{ block_contact.title }}</h2>
-        {{ block_contact.body |> md }}
-    </div>
-    <div class="flow color-primary-900 bg-primary-200">
-        <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form flow">
-            <div class="form-group">
-                <label for="name">Naam</label>
-                <input type="text" id="name" name="name" required placeholder="Uw naam">
-            </div>
+<section id="contact" class="[ contact ] [  color-primary-900 bg-primary-100 ] [ region ]">
+    <div class="wrapper wrapper--wide">
+        <div class="content flow">
+            <h2 class="mt-0 color-primary-500">{{ block_contact.title }}</h2>
+            {{ block_contact.body |> md }}
 
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required placeholder="Uw e-mail">
-            </div>
+            <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form flow">
+                <div class="form-group">
+                    <label for="name">Naam</label>
+                    <input type="text" id="name" name="name" required placeholder="Uw naam">
+                </div>
 
-            <div class="form-group">
-                <label for="phone">Telefoonnummer</label>
-                <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
-            </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Uw e-mail">
+                </div>
 
-            <div class="form-group">
-                <label for="message">Bericht</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Uw bericht"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="phone">Telefoonnummer</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
+                </div>
 
-            <button type="submit" class="button">Verstuur</button>
-        </form>
+                <div class="form-group">
+                    <label for="message">Bericht</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Uw bericht"></textarea>
+                </div>
+
+                <button type="submit" class="button">Verstuur</button>
+            </form>
+        </div>
     </div>
 </section>
