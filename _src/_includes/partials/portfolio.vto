@@ -1,0 +1,32 @@
+<section id="portfolio" class="[ portfolio ] [] [ region ]">
+    <div class="wrapper">
+        <h2 class="mt-0 color-primary-500">{{ block_portfolio.title }}</h2>
+        <ul class="grid" data-layout="halves" role="list">
+            {{ set portfolio = search.pages("type=portfolio") }}
+            {{ for item of portfolio }}
+                <li>
+                    <div class="ba-slider"> 
+                        <img class="after" loading="lazy" src="{{ item.slide.after.image }}" alt="{{ item.slide.after.description }}">
+                        <img class="before" loading="lazy" src="{{ item.slide.before.image }}" alt="{{ item.slide.before.description }}">
+
+                        <span class="handle">
+                            <span class="circle">
+                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </span>
+                        </span>
+
+                        <div class="caption flow">
+                            <h3 class="mt-0 fs-step-0 color-primary-50">{{ item.title }}</h3>
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                </li>
+            {{ /for }}
+        </ul>
+    </div>
+</section>

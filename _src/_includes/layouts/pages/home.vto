@@ -14,41 +14,8 @@ layout: "layouts/base.vto"
         </div>
     </div>
 </section>
-<section id="diensten" class="[ services ] [] [ region ]">
-    <div class="wrapper flow">
-        <h2 class="block-heading mt-0 color-primary-500">{{ block_services.title }}</h2>
-        <ul class="grid" data-layout="thirds" role="list">
-        {{ set services = search.pages("type=service", "id") }}
-        {{ for service of services }}
-                <li class="flow">
-                    <h3 class="color-primary-900 fs-step-1">{{ service.title }}</h3>
-                    {{ service.description |> md }}
-                    <button class="button--link" data-dialog="dialog-{{ service.id }}">
-                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
-                    </button>
-
-                    <!-- Dialog element -->
-                    <dialog id="dialog-{{ service.id }}">
-                        <form class="flow" method="dialog">
-                            <h3 class="mt-0 color-primary-900">{{ service.title }}</h3>
-                            {{ service.content |> md }}
-                            <div>
-                                <button class="button">Sluiten</button>
-                            </div>
-                        </form>
-                    </dialog>
-                </li>
-            {{ /for }}
-        </ul>
-    </div>
-</section>
-<section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
-    <div class="marquee__track">
-        {{ for item of block_marquee.list }}
-            <div class="logo"><img src="{{ item.image }}" alt="{{ item.name }}"></div>
-        {{ /for }}
-    </div>
-</section>
+{{ include "partials/services.vto" }}
+{{ include "partials/marquee.vto" }}
 <section id="over-mij" class="[ about ] [] [ full-width-split-screen ]">
     <img class="ratio--square" src="{{ block_about.image.path }}" alt="{{ block_about.image.desc }}">
     <div class="flow color-neutral-50 bg-primary-600">
@@ -56,38 +23,7 @@ layout: "layouts/base.vto"
         {{ block_about.body |> md }}
     </div>
 </section>
-<section id="portfolio" class="[ portfolio ] [] [ region ]">
-    <div class="wrapper">
-        <h2 class="mt-0 color-primary-500">{{ block_portfolio.title }}</h2>
-        <ul class="grid" data-layout="halves" role="list">
-            {{ set portfolio = search.pages("type=portfolio") }}
-            {{ for item of portfolio }}
-                <li>
-                    <div class="ba-slider"> 
-                        <img class="after" loading="lazy" src="{{ item.slide.after.image }}" alt="{{ item.slide.after.description }}">
-                        <img class="before" loading="lazy" src="{{ item.slide.before.image }}" alt="{{ item.slide.before.description }}">
-
-                        <span class="handle">
-                            <span class="circle">
-                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </span>
-                        </span>
-
-                        <div class="caption flow">
-                            <h3 class="mt-0 fs-step-0 color-primary-50">{{ item.title }}</h3>
-                            <p>{{ item.description }}</p>
-                        </div>
-                    </div>
-                </li>
-            {{ /for }}
-        </ul>
-    </div>
-</section>
+{{ include "partials/portfolio.vto" }}
 <section class="[ mission ] [ bg-neutral-50 ] [ full-width-split-screen ]">
     <div class="content">
         <h2 class="mt-0 color-primary-500">Gezondheid & comfort centraal</h2>
@@ -112,29 +48,7 @@ layout: "layouts/base.vto"
             <h2 class="mt-0 color-primary-500">{{ block_contact.title }}</h2>
             {{ block_contact.body |> md }}
 
-            <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form flow">
-                <div class="form-group">
-                    <label for="name">Naam</label>
-                    <input type="text" id="name" name="name" required placeholder="Uw naam">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required placeholder="Uw e-mail">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Telefoonnummer</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Bericht</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Uw bericht"></textarea>
-                </div>
-
-                <button type="submit" class="button">Verstuur</button>
-            </form>
+            {{ include "partials/forms/contact.vto" }}
         </div>
     </div>
 </section>
