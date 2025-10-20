@@ -67,5 +67,6 @@ export default function () {
         site.add("media");
         site.use(inline());
         site.use(sitemap());
+        site.add("js/scripts.js");
     }
 }
