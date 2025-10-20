@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {{ include "partials/shared/head.vto" }}
-</head>
-<body>
-    <header class="site-header site-header--fixed">
-        <div class="site-header__inner wrapper">
-            <a class="brand" href="/">
-                {{ if site.logo }}
-                    <img src="{{ site.logo }}" inline>
-                {{ /if }}
-                <span class="color-primary-500">
-                    {{ site.name }}
-                </span>
-            </a>
-            <button class="hamburger" aria-label="toggle mobile menu">
-                <span class="bar bar--1"></span>
-                <span class="bar bar--2"></span>
-                <span class="bar bar--3"></span>
-            </button>
-            <nav class="site-nav">
-                <ul class="site-nav__list" role="navigation">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main id="main">
-    {{ content }}
-    </main>
-    {{ include "partials/shared/footer.vto" }}
-</body>
-</html>
+---
+layout: "layouts/base.vto"
+---
+
+<section class="[ page ] [] [ region py-xl-2xl ]">
+    <div class="wrapper wrapper--small flow">
+        {{ content }}
+    </div>
+</section>

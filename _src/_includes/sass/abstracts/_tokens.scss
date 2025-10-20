@@ -14,6 +14,16 @@ $active-theme: $light;
 $site-header-padding-block: var(--space-3xs);
 
 // -----------------------------------------------------------------------------
+// Navigation
+// -----------------------------------------------------------------------------
+
+$nav-foreground: inherit;
+$nav-foreground-hover: var(--primary-500);
+
+$nav-background: inherit;
+$nav-background-hover: var(--primary-100);
+
+// -----------------------------------------------------------------------------
 // Hamburger
 // -----------------------------------------------------------------------------
 
@@ -41,7 +51,7 @@ $button-background: var(--primary-400);
 $button-background-hover: var(--primary-800);
 
 $button-font-size: var(--fs-step-0);
-$button-font-weight: var(--fw-semibold);
+$button-font-weight: var(--fw-medium);
 
 $button-padding: var(--space-xs) var(--space-s);
 $button-radius: var(--radius-s);

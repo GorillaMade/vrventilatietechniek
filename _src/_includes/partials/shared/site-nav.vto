@@ -1,0 +1,9 @@
+<nav id="main-nav" class="site-nav nav--responsive" x-bind:class="{ 'open': menuOpen }">
+    <ul class="nav__list" role="list">
+        {{ for entry of search.pages("menu.visible=true", "menu.order") }}
+        <li class="nav__item">
+            <a href="{{ entry.url |> url }}" class="nav__link" {{ if url == entry.url || (url.startsWith(entry.url) && entry.url != "/" && url.length > entry.url.length) }} aria-current="page" {{ /if }}>{{ entry.menu.title }}</a>
+        </li>
+        {{ /for }}
+    </ul>
+</nav>

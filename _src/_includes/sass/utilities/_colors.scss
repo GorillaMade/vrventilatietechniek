@@ -12,36 +12,3 @@
         }
     }
 }
-
-
-// // Color(s) Light theme
-// html[data-theme='light'] {
-//     @each $color, $shade-map in $light {
-//         @each $shade, $value in $shade-map {
-//             .color-#{$color}-#{$shade} {
-//                 color: #{$value};
-//             }
-
-//             .bg-#{$color}-#{$shade} {
-//                 background: #{$value};
-//             }
-//         }
-//     }
-// }
-
-
-// // Color(s) Dark theme
-
-// html[data-theme='dark'] {
-//     @each $color, $shade-map in $dark {
-//         @each $shade, $value in $shade-map {
-//             .color-#{$color}-#{$shade} {
-//                 color: #{$value};
-//             }
-
-//             .bg-#{$color}-#{$shade} {
-//                 background: #{$value};
-//             }
-//         }
-//     }
-// }

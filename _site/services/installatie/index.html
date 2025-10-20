@@ -1,7 +1,74 @@
 <!DOCTYPE html>
-<html><head><meta property="og:type" content="website">
+<html lang="en"><head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Installatie - </title>
+
+<link rel="preload" href="/css/styles.css" as="style">
+<link rel="stylesheet" href="/css/styles.css">
+
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
+<script src="//unpkg.com/alpinejs" defer=""></script>
+<meta property="og:type" content="website">
 <meta property="og:url" content="http://localhost:3000/services/installatie/">
 <meta name="twitter:card" content="summary">
-<meta name="generator" content="Lume v3.0.9">
-</head><body><p>Wij zorgen voor de professionele installatie van ventilatiesystemen die perfect aansluiten op uw woning of bedrijfspand. Een slecht geïnstalleerd systeem kan leiden tot vochtproblemen, schimmelvorming en ongezonde lucht. Met onze vakkundige aanpak bent u verzekerd van een optimale luchtcirculatie, energiezuinig functioneren en een gezond binnenklimaat.</p>
+<meta name="generator" content="Lume v3.0.11">
+</head>
+<body class="bg-gradient-blue-to-white">
+    <header class="site-header">
+    <div class="site-header__inner wrapper" x-data="{ menuOpen: false }">
+        <a href="/" class="brand">LOGO</a>
+        <button class="hamburger" @click="menuOpen = !menuOpen" x-bind:aria-expanded="menuOpen" aria-controls="site-nav" x-bind:aria-label="menuOpen ? 'Menu sluiten' : 'Menu openen'" x-bind:class="{ 'open': menuOpen }">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        <nav id="main-nav" class="site-nav nav--responsive" x-bind:class="{ 'open': menuOpen }">
+    <ul class="nav__list" role="list">
+        <li class="nav__item">
+            <a href="/" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+            <a href="/over-mij/" class="nav__link">Over mij</a>
+        </li>
+        <li class="nav__item">
+            <a href="/diensten/" class="nav__link">Diensten</a>
+        </li>
+        <li class="nav__item">
+            <a href="/projecten/" class="nav__link">Projecten</a>
+        </li>
+    </ul>
+</nav>
+    </div>
+</header>
+    <main>
+        <section class="[ service ] [] [ region py-xl-2xl ]">
+    <div class="wrapper flow">
+        <h1>Installatie</h1>
+<p>Wij zorgen voor de professionele installatie van ventilatiesystemen die perfect aansluiten op uw woning of bedrijfspand. Een slecht geïnstalleerd systeem kan leiden tot vochtproblemen, schimmelvorming en ongezonde lucht. Met onze vakkundige aanpak bent u verzekerd van een optimale luchtcirculatie, energiezuinig functioneren en een gezond binnenklimaat.</p>
+
+    </div>
+</section>
+    </main>
+    <footer class="[ site-footer ] [ py-m-l ]">
+    <div class="site-footer__inner wrapper flex-group flex-group--between">
+        <div class="">
+            © 2025 VR Ventilatie Techniek. Alle rechten voorbehouden.
+        </div>
+        <nav class="nav nav--horizontal">
+            <ul class="nav__list" role="list">
+                <li class="nav__item">
+                    <a href="/" class="nav__link">Algemene Voorwaarden</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script type="module" src="js/main.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body></html>

@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.9/",
+    "lume/": "https://deno.land/x/lume@v3.0.11/",
     "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.12/jsx-runtime.ts"
   },
   "tasks": {
@@ -21,7 +21,7 @@
   ],
   "lint": {
     "plugins": [
-      "https://deno.land/x/lume@v3.0.9/lint.ts"
+      "https://deno.land/x/lume@v3.0.11/lint.ts"
     ],
     "rules": {
       "exclude": [

@@ -1,68 +1,31 @@
-@use "sass/abstracts" as *;
-
 @forward "sass/base";
-@forward "sass/compositions";
+@forward "sass/components";
 @forward "sass/utilities";
-@forward "sass/blocks";
-
-
-// -----------------------------------------------------------------------------
-// Base
-// -----------------------------------------------------------------------------
-
-ul:is([role="navigation"]) {
-    list-style: none;
-    padding-inline-start: 0;
-}
+@forward "sass/layout";
 
 
 .brand {
-    flex: 1;
-    text-decoration: none;
-
-    span {
-        font-weight: var(--fw-semibold);
-        letter-spacing: -0.015em;
-    }
+  flex: 1 1 auto; // ✅ laat het logo meeschalen
+  min-width: 12rem; // ✅ minimale breedte voor logo
+  font-weight: var(--fw-bold);
 }
 
-
-h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: var(--fs-step-4);
-}
-
-h2 {
-    font-family: "Montserrat", sans-serif;
-    font-size: var(--fs-step-3);
-}
-
-h3 {
-    font-family: "Montserrat", sans-serif;
-    font-size: var(--fs-step-2);
-}
-
-
-// -----------------------------------------------------------------------------
-// 
-// -----------------------------------------------------------------------------
+//
+//
+//
 
 .mt-0 {
-    margin-block-start: 0;
+  margin-block-start: 0;
 }
 
-
-.ratio--square {
-    aspect-ratio: 1;
-}
-
-// -----------------------------------------------------------------------------
-// 
-// -----------------------------------------------------------------------------
-
-.text--center {
+.text--centered {
     text-align: center;
 }
+
+.bg-gradient-blue-to-white {
+  background: linear-gradient(180deg, var(--primary-50), white);
+}
+
 
 // -----------------------------------------------------------------------------
 // 
@@ -105,15 +68,6 @@ h3 {
     }
 }
 
-
-
-// -----------------------------------------------------------------------------
-// 
-// -----------------------------------------------------------------------------
-
-.site-footer {
-    --region-space: 2.5vmax;
-}
 
 
 // -----------------------------------------------------------------------------
@@ -186,116 +140,15 @@ h3 {
 
 
 // -----------------------------------------------------------------------------
-// Dialog
+// 
 // -----------------------------------------------------------------------------
 
-dialog {
-    border: none;
-    border-radius: var(--radius-s);
-    padding: var(--space-l);
-    max-width: 50rem;
-}
-
-dialog::backdrop {
-    background: rgba(0,0,0,0.6);
+.about img {
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 
-// -----------------------------------------------------------------------------
-// Form(s)
-// -----------------------------------------------------------------------------
-
-form {
-    width: 100%;
-}
-
-label {
-    font-weight: var(--fw-semibold);
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: var(--space-xs);
-    border: 1px solid var(--neutral-50);
-    border-radius: var(--radius-xs, .75rem);
-}
-
-textarea {
-    min-width: 100%;
-    resize: vertical;
-}
-
-
-// -----------------------------------------------------------------------------
-//
-// -----------------------------------------------------------------------------
-
-.ba-slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 4 / 3; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.ba-slider img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  pointer-events: none;
-  user-select: none;
-}
-
-.ba-slider .before {
-  z-index: 2;
-  clip-path: inset(0 50% 0 0);
-  transition: clip-path 0.1s ease;
-}
-
-.ba-slider .after {
-  z-index: 1;
-}
-
-.ba-slider .handle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  transform: translateX(-50%);
-  cursor: ew-resize;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ba-slider .circle {
-  width: 40px;
-  height: 40px;
-  background: rgba(255,255,255,0.9);
-  border: 2px solid #666;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-.ba-slider .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: var(--space-xs) var(--space-s);
-  background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.25));
-  color: #fff;
-  z-index: 4;
+.service h1 {
+  
 }

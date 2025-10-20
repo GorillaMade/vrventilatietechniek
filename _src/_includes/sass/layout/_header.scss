@@ -1,0 +1,22 @@
+.site-header {
+    background: var(--site-header-background, white);
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+
+.site-header {
+
+    &__inner > :first-child {
+        flex: 1;
+    }
+}

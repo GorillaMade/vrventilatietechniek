@@ -4,9 +4,10 @@
     align-items: center;
     width: fit-content;
     gap: var(--flex-group-gap, var(--space-s));
+}
 
-    &--between {
-        width: auto;
-        justify-content: space-between;
-    }
+
+.flex-group--between {
+    justify-content: space-between;
+    width: auto;
 }

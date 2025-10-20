@@ -3,11 +3,11 @@
 <head>
     {{ include "partials/shared/head.vto" }}
 </head>
-<body>
-    {{ include "partials/shared/header.vto" }}
-    <main id="main">
-    {{ content }}
+<body class="bg-gradient-blue-to-white">
+    {{ include "partials/shared/site-header.vto" }}
+    <main>
+        {{ content }}
     </main>
-    {{ include "partials/shared/footer.vto" }}
+    {{ include "partials/shared/site-footer.vto" }}
 </body>
 </html>

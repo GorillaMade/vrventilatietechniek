@@ -2,268 +2,67 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VR ventilatie techniek - </title>
+<title>Homepage - </title>
 
 <link rel="preload" href="/css/styles.css" as="style">
 <link rel="stylesheet" href="/css/styles.css">
 
-<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
+<script src="//unpkg.com/alpinejs" defer=""></script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://localhost:3000/">
 <meta name="twitter:card" content="summary">
-<meta name="generator" content="Lume v3.0.9">
+<meta name="generator" content="Lume v3.0.11">
 </head>
-<body>
-    <header class="site-header site-header--fixed">
-    <div class="site-header__inner wrapper">
-        <a class="brand" href="/">
-            <span class="color-primary-500">
-                VR ventilatie Techniek
-            </span>
-        </a>
-        <button class="hamburger" aria-label="toggle mobile menu">
+<body class="bg-gradient-blue-to-white">
+    <header class="site-header">
+    <div class="site-header__inner wrapper" x-data="{ menuOpen: false }">
+        <a href="/" class="brand">LOGO</a>
+        <button class="hamburger" @click="menuOpen = !menuOpen" x-bind:aria-expanded="menuOpen" aria-controls="site-nav" x-bind:aria-label="menuOpen ? 'Menu sluiten' : 'Menu openen'" x-bind:class="{ 'open': menuOpen }">
             <span class="bar bar--1"></span>
             <span class="bar bar--2"></span>
             <span class="bar bar--3"></span>
         </button>
-        <nav class="site-nav">
-    <ul class="site-nav__list" role="navigation">
-            <li>
-                <a href="/" class="site-nav__link" aria-current="page">Home</a>
-            </li>
+        <nav id="main-nav" class="site-nav nav--responsive" x-bind:class="{ 'open': menuOpen }">
+    <ul class="nav__list" role="list">
+        <li class="nav__item">
+            <a href="/" class="nav__link" aria-current="page">Home</a>
+        </li>
+        <li class="nav__item">
+            <a href="/over-mij/" class="nav__link">Over mij</a>
+        </li>
+        <li class="nav__item">
+            <a href="/diensten/" class="nav__link">Diensten</a>
+        </li>
+        <li class="nav__item">
+            <a href="/projecten/" class="nav__link">Projecten</a>
+        </li>
     </ul>
 </nav>
     </div>
 </header>
-    <main id="main">
-    <section id="hero" class="[ hero ] [ stack ] []">
-    <img loading="lazy" src="https://media.gettyimages.com/id/1148661849/photo/beautiful-young-asian-woman-drinking-coffee-and-enjoying-fresh-air-on-balcony-in-the-morning.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=641PanVR6AkbZfSRrPfXfd3WZPD4BnNttSZbVFC43eQ=" alt="Korte beschrijving van de foto">
-    <div class="hero__inner wrapper wrapper--wide region">
-        <div class="flow">
-            <h1 class="" "="">Schone lucht, slimme ventilatie.</h1>
-            <p>Van advies tot installatie: alles voor een optimaal binnenklimaat.</p>
-            <div>
-                <a href="#contact" class="button">Neem contact op voor advies</a>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="diensten" class="[ services ] [] [ region ]">
-    <div class="wrapper flow">
-        <h2 class="block-heading mt-0 color-primary-500">Mijn diensten</h2>
-        <ul class="grid" data-layout="thirds" role="list">
-                <li class="flow">
-                    <h3 class="color-primary-900 fs-step-1">Inspectie</h3>
-                    <p>Met een persoonlijke inspectie controleer ik uw systeem grondig. Problemen komen zo op tijd aan het licht en de luchtkwaliteit blijft op peil.</p>
-                    <button class="button--link" data-dialog="dialog-1">
-                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
-                    </button>
-
-                    <!-- Dialog element -->
-                    <dialog id="dialog-1">
-                        <form class="flow" method="dialog">
-                            <h3 class="mt-0 color-primary-900">Inspectie</h3>
-                            <p>Door middel van een grondige inspectie brengen wij de staat en werking van uw ventilatiesysteem in kaart. Vaak merkt u niet direct dat er vervuiling of een defect aanwezig is, terwijl dit wél grote gevolgen kan hebben voor luchtkwaliteit en energiekosten. Met onze inspecties ontdekt u tijdig problemen en voorkomt u onnodige reparaties, waardoor u verzekerd blijft van frisse en gezonde lucht.</p>
-                            <div>
-                                <button class="button">Sluiten</button>
-                            </div>
-                        </form>
-                    </dialog>
-                </li>
-                <li class="flow">
-                    <h3 class="color-primary-900 fs-step-1">Installatie</h3>
-                    <p>Ik installeer ventilatiesystemen die perfect aansluiten op uw situatie. Zo voorkomt u vocht en schimmel en geniet u van frisse, gezonde lucht.</p>
-                    <button class="button--link" data-dialog="dialog-2">
-                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
-                    </button>
-
-                    <!-- Dialog element -->
-                    <dialog id="dialog-2">
-                        <form class="flow" method="dialog">
-                            <h3 class="mt-0 color-primary-900">Installatie</h3>
-                            <p>Wij zorgen voor de professionele installatie van ventilatiesystemen die perfect aansluiten op uw woning of bedrijfspand. Een slecht geïnstalleerd systeem kan leiden tot vochtproblemen, schimmelvorming en ongezonde lucht. Met onze vakkundige aanpak bent u verzekerd van een optimale luchtcirculatie, energiezuinig functioneren en een gezond binnenklimaat.</p>
-                            <div>
-                                <button class="button">Sluiten</button>
-                            </div>
-                        </form>
-                    </dialog>
-                </li>
-                <li class="flow">
-                    <h3 class="color-primary-900 fs-step-1">Onderhoud</h3>
-                    <p>Ik zorg voor regelmatig onderhoud zodat uw systeem schoon, zuinig en betrouwbaar blijft. Dit verlengt de levensduur en houdt uw binnenklimaat gezond.</p>
-                    <button class="button--link" data-dialog="dialog-3">
-                        Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
-                    </button>
-
-                    <!-- Dialog element -->
-                    <dialog id="dialog-3">
-                        <form class="flow" method="dialog">
-                            <h3 class="mt-0 color-primary-900">Onderhoud</h3>
-                            <p>Regelmatig onderhoud houdt uw ventilatiesysteem schoon, efficiënt en betrouwbaar. Zonder onderhoud hopen stof en vuil zich op, waardoor de luchtkwaliteit afneemt en het systeem meer energie verbruikt. Met onze onderhoudsservice verlengt u de levensduur van uw installatie, bespaart u op kosten en creëert u een blijvend gezond leef- en werkklimaat.</p>
-                            <div>
-                                <button class="button">Sluiten</button>
-                            </div>
-                        </form>
-                    </dialog>
-                </li>
-        </ul>
-    </div>
-</section>
-<section class="[ marquee ] [ bg-neutral-100 ] [ region ]">
-  <div class="marquee__track">
-      <div class="logo"><img src="media/logos/brink-logo.png" alt="Brink"></div>
-      <div class="logo"><img src="media/logos/duco-logo.png" alt="Duco"></div>
-      <div class="logo"><img src="media/logos/itho-logo.png" alt="Itho"></div>
-      <div class="logo"><img src="media/logos/orcon-logo.png" alt="Orcon"></div>
-      <div class="logo"><img src="media/logos/zehnder-logo.png" alt="Zehnder"></div>
-  </div>
-</section>
-<section id="over-mij" class="[ about ] [] [ full-width-split-screen ]">
-    <img class="ratio--square" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-    <div class="flow color-neutral-50 bg-primary-600">
-        <h2 class="mt-0">Over VR Ventilatie Techniek</h2>
-        <p>VR Ventilatie Techniek is opgericht door Vernal Ricardo, die al meer dan 10 jaar ervaring heeft in ventilatie en luchtbehandelingssystemen. Wij helpen bedrijven en particulieren met professionele ventilatie-oplossingen die zorgen voor een gezond en comfortabel binnenklimaat.</p>
-<p>Bij VR Ventilatie Techniek staat kwaliteit, betrouwbaarheid en service voorop. Van advies en ontwerp tot installatie en onderhoud: wij begeleiden u bij elk stap. Met onze kennis en ervaring leveren wij op maat gemaakte oplossingen die passen bij uw gebouw en wensen.</p>
-<p>Kies voor VR Ventilatie Techniek en ervaar het verschil van een expert die meedenkt en resultaten levert.</p>
-    </div>
-</section>
-<section id="portfolio" class="[ portfolio ] [] [ region ]">
-    <div class="wrapper">
-        <h2 class="mt-0 color-primary-500">Mijn werk in beeld</h2>
-        <ul class="grid" data-layout="halves" role="list">
-                <li>
-                    <div class="ba-slider"> 
-                        <img class="after" loading="lazy" src="https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        <img class="before" loading="lazy" src="https://images.unsplash.com/photo-1758798157512-f0a864c696c9?q=80&amp;w=2053&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-
-                        <span class="handle">
-                            <span class="circle">
-                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            </span>
-                        </span>
-
-                        <div class="caption flow">
-                            <h3 class="mt-0 fs-step-0 color-primary-50">Ventilatie upgrade</h3>
-                            <p>Van verstopte afzuiging naar optimale luchtcirculatie</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="ba-slider"> 
-                        <img class="after" loading="lazy" src="https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        <img class="before" loading="lazy" src="https://images.unsplash.com/photo-1605434896752-b7566eb11bb8?q=80&amp;w=2072&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-
-                        <span class="handle">
-                            <span class="circle">
-                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            </span>
-                        </span>
-
-                        <div class="caption flow">
-                            <h3 class="mt-0 fs-step-0 color-primary-50">Ventilatie upgrade</h3>
-                            <p>Van verstopte afzuiging naar optimale luchtcirculatie</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="ba-slider"> 
-                        <img class="after" loading="lazy" src="https://images.unsplash.com/photo-1676806022055-1390b6878f26?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        <img class="before" loading="lazy" src="https://images.unsplash.com/photo-1707596830261-9c6138a6dd3b?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-
-                        <span class="handle">
-                            <span class="circle">
-                            <svg class="icon left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            <svg class="icon right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            </span>
-                        </span>
-
-                        <div class="caption flow">
-                            <h3 class="mt-0 fs-step-0 color-primary-50">Ventilatie upgrade</h3>
-                            <p>Van verstopte afzuiging naar optimale luchtcirculatie</p>
-                        </div>
-                    </div>
-                </li>
-        </ul>
-    </div>
-</section>
-<section class="[ mission ] [ bg-neutral-50 ] [ full-width-split-screen ]">
-    <div class="content">
-        <h2 class="mt-0 color-primary-500">Gezondheid &amp; comfort centraal</h2>
-        <p>
-            Onze missie is om ieder huishouden te voorzien van een gezond en comfortabel binnenklimaat. Wij geloven dat frisse lucht en goed werkende ventilatie de basis zijn voor een gezonder leven. Daarom zorgen wij voor deskundige installatie, nauwkeurige inspectie en betrouwbaar onderhoud – zodat u en uw gezin zorgeloos kunnen ademen.
-        </p>
-    </div>
-    <img loading="lazy" src="https://images.unsplash.com/photo-1574334292321-4844f63aefef?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-</section>
-<section class="[ lasting ] [] [ full-width-split-screen ]">
-    <img loading="lazy" src="https://images.unsplash.com/photo-1706470251325-21714f1bbed1?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-    <div class="content">
-        <h2 class="mt-0 color-primary-500">Duurzaamheid &amp; toekomstgericht</h2>
-        <p>
-            Wij denken niet alleen aan vandaag, maar ook aan morgen. Daarom werken wij met energiezuinige en duurzame oplossingen die bijdragen aan een beter milieu en lagere energiekosten. Door preventief onderhoud en het toepassen van moderne technieken verlengen wij de levensduur van uw ventilatiesysteem en verkleinen we samen de ecologische voetafdruk. Zo combineren we comfort met verantwoordelijkheid voor de toekomst.
-        </p>
-    </div>
-</section>
-<section id="contact" class="[ contact ] [  color-primary-900 bg-primary-100 ] [ region ]">
-    <div class="wrapper wrapper--wide">
-        <div class="content flow">
-            <h2 class="mt-0 color-primary-500">Contact</h2>
-            <p>Een goed werkend ventilatiesysteem draagt bij aan een gezond binnenklimaat. Ik staat klaar om al uw vragen te beantwoorden en samen te kijken naar de beste oplossing voor uw woning.</p>
-
-            <form id="contact-form" method="POST" action="/contact-verstuurd" class="contact-form flow">
-    <div class="form-group">
-        <label for="name">Naam</label>
-        <input type="text" id="name" name="name" required="" placeholder="Uw naam">
-    </div>
-
-    <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required="" placeholder="Uw e-mail">
-    </div>
-
-    <div class="form-group">
-        <label for="phone">Telefoonnummer</label>
-        <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
-    </div>
-
-    <div class="form-group">
-        <label for="message">Bericht</label>
-        <textarea id="message" name="message" rows="5" required="" placeholder="Uw bericht"></textarea>
-    </div>
-
-    <button type="submit" class="button">Verstuur</button>
-</form>
-        </div>
-    </div>
-</section>
+    <main>
+        
     </main>
-    <footer class="[ site-footer ] [] [ region ]">
-    <div class="wrapper flex-group flex-group--between">
-        <span>© Copyright 2025 VR ventilatie Techniek - kvk 12345678</span>
-        <div class="cluster">
-            <a href="/algemene-voorwaarden">Algemene voorwaarden</a>
+    <footer class="[ site-footer ] [ py-m-l ]">
+    <div class="site-footer__inner wrapper flex-group flex-group--between">
+        <div class="">
+            © 2025 VR Ventilatie Techniek. Alle rechten voorbehouden.
         </div>
+        <nav class="nav nav--horizontal">
+            <ul class="nav__list" role="list">
+                <li class="nav__item">
+                    <a href="/" class="nav__link">Algemene Voorwaarden</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </footer>
 
 <!-- Scripts -->
+<script type="module" src="js/main.js"></script>
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<script src="/js/scripts.js"></script>
 
 </body></html>
