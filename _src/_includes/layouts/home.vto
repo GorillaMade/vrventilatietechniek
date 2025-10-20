@@ -40,17 +40,15 @@ layout: "layouts/base.vto"
 <section class="[ portfolio ] [] [ py-xl-2xl ]">
     <div class="wrapper">
         <h2 class="color-primary-500">Portfolio</h2>
+        <ul class="grid" data-layout="thirds" role="list">
+            {{ set projects = search.pages("type=project", "order") }}
+            {{ for item of projects }}
+                <li class="flow">
+                    <h2 class="fs-step-1 color-primary-900">{{ item.title }}</h2>
+                    {{ item.description |> md }}
+                    <a class="button" href="{{ item.url }}">Meer informatie</a>
+                </li>
+            {{ /for }}S
+        </ul>
     </div>
-</section>
-<section class="[ about ] [ full-width-split-screen ] []">
-    <img loading="lazy" src="{{ image.path }}" alt="{{ image.description }}">
-    <div class="flow">
-        {{ content }}
-    </div>
-</section>
-<section class="[ about ] [ full-width-split-screen ] []">
-    <div class="flow">
-        {{ content }}
-    </div>
-    <img loading="lazy" src="{{ image.path }}" alt="{{ image.description }}">
 </section>
