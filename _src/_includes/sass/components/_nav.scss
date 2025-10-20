@@ -1,43 +1,40 @@
 @use "../abstracts" as *;
 
 // -----------------------------------------------------------------------------
-//
+// Basis (mobile first)
 // -----------------------------------------------------------------------------
 
 .site-nav {
-    &:has(.open) {
-        display: block;
-    }    
+    flex-basis: 100%;
+    text-align: start;
+
+    
 }
-
-
-// -----------------------------------------------------------------------------
-//
-// -----------------------------------------------------------------------------
 
 .nav__list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: var(--_nav-gap);
     padding: 0;
     margin: 0;
     list-style: none;
+    align-items: stretch;
+    width: 100%;
 }
-
-
-// -----------------------------------------------------------------------------
-//
-// -----------------------------------------------------------------------------
 
 .nav__item {
     position: relative;
+    width: 100%;
 }
 
 .nav__link {
     --_nav-foreground: var(--nav-foreground, #{$nav-foreground});
     --_nav-background: var(--nav-background, #{$nav-background});
 
-    display: inline-block;
+    display: block;
+    width: 100%;
+    text-align: start;
     text-decoration: none;
     cursor: pointer;
     padding: var(--space-s);
@@ -59,87 +56,76 @@
     }
 }
 
-
-// -----------------------------------------------------------------------------
-//
-// -----------------------------------------------------------------------------
-
-
-
-
-// -----------------------------------------------------------------------------
-//
-// -----------------------------------------------------------------------------
-
-.nav--horizontal .nav__list {
-    flex-direction: row;
-    align-items: center;
+.nav__dropdown {
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding-inline-start: var(--space-md);
+    display: none;
 }
 
+.nav__item--has-dropdown[aria-expanded='true'] > .nav__dropdown {
+    display: flex;
+}
 
-.nav--vertical .nav__list {
-    flex-direction: column;
-    align-items: flex-start;
+// -----------------------------------------------------------------------------
+// Grotere schermen (vanaf 48em ≈ 768px)
+// -----------------------------------------------------------------------------
+
+@media (min-width: 48em) {
+    .site-nav {
+        display: flex;
+        flex-basis: auto;
+        text-align: center;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
 
     .nav__item {
-        width: 100%;
+        width: auto;
     }
 
     .nav__link {
-        display: block;
-        width: 100%;
-        text-align: start;
+        display: inline-block;
+        width: auto;
+        text-align: center;
     }
 
     .nav__dropdown {
-        position: static;
-        border: none;
-        box-shadow: none;
-        padding-inline-start: var(--nav-vertical-padding, var(--space-s));
-    }
-}
-
-
-/* -----------------------------------------
-   Responsieve layout
------------------------------------------- */
-@media (max-width: 48em) {
-    .site-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
         display: none;
-        flex-basis: 100%;
-        text-align: start;
-
-        &:has(.open) {
-            display: block;
-        }
+        padding-inline-start: 0;
+        border: var(--border);
+        box-shadow: var(--shadow);
     }
 
-
-    .nav--responsive .nav__list {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    .nav--responsive .nav__item {
-        width: 100%;
-    }
-
-    .nav--responsive .nav__link {
+    .nav__item--has-dropdown[aria-expanded='true'] > .nav__dropdown {
         display: block;
-        width: 100%;
-        text-align: start;
     }
 
-    .nav--responsive .nav__dropdown {
-        position: static;
-        border: none;
-        box-shadow: none;
-        padding-inline-start: var(--space-md);
-        display: none;
+    .nav--horizontal .nav__list {
+        flex-direction: row;
+        align-items: center;
     }
 
-    .nav--responsive .nav__item--has-dropdown[aria-expanded='true']>.nav__dropdown {
-        display: flex;
+    .nav--vertical .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .nav__item {
+            width: 100%;
+        }
+
+        .nav__link {
+            display: block;
+            width: 100%;
+            text-align: start;
+        }
     }
 }

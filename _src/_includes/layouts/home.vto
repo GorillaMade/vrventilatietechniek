@@ -2,10 +2,10 @@
 layout: "layouts/base.vto"
 ---
 
-<section class="[ hero ] [ stack ] [ region py-xl-2xl ]">
+<section class="[ hero ] [ stack ] []">
     <img loading="lazy" src="{{ block_hero.image.path }}" alt="{{ block_hero.image.desc }}">
     <div class="hero__inner wrapper wrapper--wide">
-        <div class="flow">
+        <div class="flow py-xl-2xl">
             <h1 class=""">{{ block_hero.title }}</h1>
             {{ block_hero.body |> md }}
             <div>
@@ -48,7 +48,7 @@ layout: "layouts/base.vto"
                     {{ item.description |> md }}
                     <a class="button" href="{{ item.url }}">Meer informatie</a>
                 </li>
-            {{ /for }}S
+            {{ /for }}
         </ul>
     </div>
 </section>
