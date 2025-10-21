@@ -149,12 +149,54 @@
 }
 
 
-.service h1 {
-  
+.project {
+  position: relative;
+  display: grid;
+
+  &__image {
+    aspect-ratio: 1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius-m);
+  }
+
+  &__image--featured {
+    aspect-ratio: 1;
+    object-fit: cover;
+    height: 40dvw;
+    width: 100dvw;
+    opacity: .25;
+  }
+
+  &.stack > .wrapper {
+    display: grid;
+    text-align: center;
+    align-self: center;
+    z-index: 10;
+  }
+
+  .flex-group {
+    align-items: center;
+  }
+
+  &--content {
+    h1, h2, h3,
+    h4, h5, h6 {
+      color: var(--primary-900);
+    }
+  }
 }
 
 
 .site-footer {
   color: var(--neutral-50);
   background: var(--primary-900);
+}
+
+
+hr {
+  background: var(--neutral-200);
+  border: 0;
+  height: 1px;
 }

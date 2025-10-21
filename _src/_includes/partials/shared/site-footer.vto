@@ -1,15 +1,54 @@
-<footer class="[ site-footer ] [ py-m-l ]">
-    <div class="site-footer__inner wrapper flex-group flex-group--between">
-        <div class="">
-            &copy; 2025 {{ site.name }}. Alle rechten voorbehouden.
+<footer class="[ site-footer ] [ py-l-xl ]">
+    {{# <div class="wrapper">
+        <div class="grid" data-layout="thirds">
+            <div class="flow">
+                <h5 class="mt-0">{{ site.name }} in het kort</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur deserunt itaque commodi dolores beatae necessitatibus!</p>
+            </div>
+            <div class="flow">
+                <h5 class="mt-0">Diensten</h5>
+                <nav class="nav nav--vertical">
+                    <ul class="nav__list" role="list">
+                        {{ set services = search.pages("type=service", "order") }}
+                        {{ for item of services }}
+                        <li>
+                            <a class="button--link" href="{{ item.url }}">{{ item.title }}</a>
+                        </li>
+                        {{ /for }}
+                    </ul>
+                </nav>
+            </div>
+            <div class="flow">
+                <h5 class="mt-0">Indirecte links</h5>
+                <nav class="nav nav--vertical">
+                    <ul class="nav__list" role="list">
+                        {{ for item of search.pages("menu.visible=true", "menu.order", "menu.footer=true") }}
+                        <li>
+                            <a class="button--link" href="{{ item.url }}">{{ item.menu.title }}</a>
+                        </li>
+                        {{ /for }}
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <nav class="nav nav--horizontal">
-            <ul class="nav__list" role="list">
-                <li class="nav__item">
-                    <a href="/" class="nav__link">Algemene Voorwaarden</a>
-                </li>
-            </ul>
-        </nav>
+    </div> #}}
+    <div class="site-footer__inner wrapper mt-m">
+        <div class="flex-group flex-group--between">
+            <div class="fs-step-0">
+                &copy; 2025 {{ site.name }}. Alle rechten voorbehouden.
+            </div>
+            <nav class="">
+                <ul class="cluster" role="list">
+                    <li class="nav__item">
+                        <a href="/" class="button--link">Algemene Voorwaarden</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <hr class="bg-primary-50">
+        <div class="text--centered fs-step--1 pt-m">
+            Deze website is <a href="https://gorillamade.nl" class="fw-semibold color-primary-300">GorillaMade</a>
+        </div>
     </div>
 </footer>
 

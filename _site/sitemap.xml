@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:3000/</loc>
-    <lastmod>2025-10-20T13:36:09.168Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.682Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/diensten/</loc>
-    <lastmod>2025-10-20T13:36:09.168Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.682Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/over-mij/</loc>
-    <lastmod>2025-10-20T13:36:09.168Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.682Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projecten/</loc>
-    <lastmod>2025-10-20T13:36:09.168Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.682Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/project-one/</loc>
-    <lastmod>2025-10-20T19:30:39.936Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.686Z</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:3000/projects/project-three/</loc>
+    <lastmod>2025-10-21T09:55:30.956Z</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:3000/projects/project-two/</loc>
+    <lastmod>2025-10-21T09:55:18.954Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/services/inspectie/</loc>
-    <lastmod>2025-10-20T13:36:09.169Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.683Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/services/installatie/</loc>
-    <lastmod>2025-10-20T13:40:45.312Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.683Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/services/onderhoud/</loc>
-    <lastmod>2025-10-20T13:40:54.685Z</lastmod>
+    <lastmod>2025-10-20T22:11:00.683Z</lastmod>
   </url>
 </urlset>

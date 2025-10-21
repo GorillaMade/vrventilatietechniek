@@ -37,16 +37,18 @@ layout: "layouts/base.vto"
         {{ block_about.body |> md }}
     </div>
 </section>
-<section class="[ portfolio ] [] [ py-xl-2xl ]">
+<section class="[ projects ] [ bg-gradient-blue-to-white ] [ py-xl-2xl ]">
     <div class="wrapper">
         <h2 class="color-primary-500">Portfolio</h2>
-        <ul class="grid" data-layout="thirds" role="list">
+        <ul class="grid" data-layout="halves" role="list">
             {{ set projects = search.pages("type=project", "order") }}
             {{ for item of projects }}
-                <li class="flow">
-                    <h2 class="fs-step-1 color-primary-900">{{ item.title }}</h2>
-                    {{ item.description |> md }}
-                    <a class="button" href="{{ item.url }}">Meer informatie</a>
+                <li class="project flow">
+                    <img class="project__image" src="{{ item.cover_image }}" alt="Foto van {{ item.title }}">
+                    <div class="flex-group flex-group--between">
+                        <h2 class="fs-step-1 fw-semibold color-primary-900 mt-0">{{ item.title }}</h2>
+                        <a class="button" href="{{ item.url }}">bekijk project <ion-icon name="eye-outline"></ion-icon></a>
+                    </div>
                 </li>
             {{ /for }}
         </ul>

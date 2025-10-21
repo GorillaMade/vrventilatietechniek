@@ -1,13 +1,22 @@
 ---
 layout: "layouts/base.vto"
 ---
-<section class="[ project ] [] [ region py-xl-2xl ]">
+<section class="[ project ] [ stack ] [ bg-neutral-950 ]">
+    <img class="project__image--featured" src="{{ cover_image }}" alt="{{ title }}">
     <div class="wrapper">
-        foto in here
+        <h1 class="color-primary-50 mt-0">{{ title }}</h1>
     </div>
 </section>
-<section class="[ project ] [] [ region py-xl-2xl ]">
+<section class="[ project--content ] [] [ region py-xl-2xl ]">
     <div class="wrapper wrapper--wide">
         {{ content }}
+
+        <ul class="grid" data-layout="thirds" role="list">
+            {{ for item of gallery }}
+                <li>
+                    <img src="{{ item.image.path }}" alt="">
+                </li>
+            {{ /for }}
+        </ul>
     </div>
 </section>

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/about.vto"
 
-title: ""
+title: "Wie is VR Ventilatie Techniek"
 description: ""
 
 image:
@@ -10,6 +10,7 @@ image:
 
 menu:
   visible: true
+  footer: true
   title: "Over mij"
   url: "/over-mij"
   order: 2
@@ -19,8 +20,8 @@ block_intro:
   text: "We geloven in eerlijk werk, duidelijke afspraken en resultaten waar je op kunt bouwen."
 ---
 
-# Over mij
+VR Ventilatie Techniek is opgericht door Vernal Ricardo, die al meer dan 10 jaar ervaring heeft in ventilatie tevens ook enige ervaring in luchtbehandelingssystemen.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. At minus a repellat? Saepe voluptas, quae odio mollitia nemo dolore debitis necessitatibus ipsum consequatur labore, aliquam cumque nostrum at dolor, perspiciatis rem earum excepturi blanditiis quia possimus reprehenderit quo similique?
+Wij helpen bedrijven en particulieren met professionele ventilatie-oplossingen die zorgen voor een gezond en comfortabel binnenklimaat.Bij VR Ventilatie Techniek staat kwaliteit, betrouwbaarheid en service voorop. Van advies tot installatie en onderhoud: wij begeleiden u bij elk stap.
 
-Eius dolores quo voluptas optio voluptatibus, libero magnam iusto qui labore nisi magni molestias voluptates, suscipit mollitia deleniti natus modi corrupti reiciendis earum excepturi. Numquam nihil eligendi fugiat magnam ipsam hic officiis, nesciunt, id, explicabo nemo quidem soluta tenetur aperiam? Sunt voluptatum, at, eum doloremque aspernatur officia officiis consequatur consectetur facere facilis adipisci, ducimus quia magnam minima nemo dicta inventore expedita!
+Met onze kennis en ervaring leveren wij op maat gemaakte oplossingen die passen bij uw gebouw en wensen. Kies voor VR Ventilatie Techniek en ervaar het verschil van een expert die meedenkt en resultaten levert.
