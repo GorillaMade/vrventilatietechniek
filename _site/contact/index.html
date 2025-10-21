@@ -2,7 +2,7 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Onderhoud - </title>
+<title> - </title>
 
 <link rel="preload" href="/css/styles.css" as="style">
 <link rel="stylesheet" href="/css/styles.css">
@@ -10,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
 <script src="//unpkg.com/alpinejs" defer=""></script>
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:3000/services/onderhoud/">
+<meta property="og:url" content="http://localhost:3000/contact/">
 <meta name="twitter:card" content="summary">
 <meta name="generator" content="Lume v3.0.11">
 </head>
@@ -38,18 +38,85 @@
             <a href="/projecten/" class="nav__link">Projecten</a>
         </li>
         <li class="nav__item">
-            <a href="/contact/" class="nav__link">Contact</a>
+            <a href="/contact/" class="nav__link" aria-current="page">Contact</a>
         </li>
     </ul>
 </nav>
     </div>
 </header>
     <main>
-        <section class="[ service ] [ bg-gradient-blue-to-white ] [ region py-xl-2xl ]">
-    <div class="wrapper wrapper--wide flow">
-        <h1 class="color-primary-500 mt-0">Onderhoud</h1>
-        <p>Regelmatig onderhoud houdt uw ventilatiesysteem schoon, efficiënt en betrouwbaar. Zonder onderhoud hopen stof en vuil zich op, waardoor de luchtkwaliteit afneemt en het systeem meer energie verbruikt. Met onze onderhoudsservice verlengt u de levensduur van uw installatie, bespaart u op kosten en creëert u een blijvend gezond leef- en werkklimaat.</p>
+        <section class="[ page ] [] [ region py-xl-2xl ]">
+    <div class="wrapper flow">
+        <div class="switcher">
 
+            <div class="content">
+                <h1 class="mt-0">Contact</h1>
+
+            </div>
+
+            <div x-data="{ 
+                terugbel: false,
+                dagen: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
+                geselecteerdeDagen: {}
+                }" class="form-card flow">
+
+                    <form id="contact-form" class="flow" hx-post="/send" hx-target="#form-response" hx-swap="innerHTML" onsubmit="return validateContactForm(this)">
+                        
+                        <div class="grid">
+                            <div class="field-group">
+                                <label for="naam">Naam</label>
+                                <input id="naam" type="text" name="naam" placeholder="Uw naam">
+                            </div>
+                            <div class="field-group">
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email" name="email" placeholder="Uw e-mailadres">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="bericht">Uw bericht</label>
+                            <textarea id="bericht" name="bericht" rows="4" placeholder="Uw bericht"></textarea>
+                        </div>
+
+                        <label class="flex-group">
+                        <input type="checkbox" name="terugbel" x-model="terugbel">
+                        <span>Ik wil graag teruggebeld worden</span>
+                        </label>
+
+                        <div class="flow" x-show="terugbel" x-transition="">
+                            <div class="field-group">
+                                <label for="tel">Telefoon nr.</label>
+                                <input id="tel" type="tel" name="telefoon" placeholder="Telefoonnummer" :required="terugbel">
+                            </div>
+
+                            <!-- Directe loop zonder template -->
+                            <template x-for="dag in dagen" :key="dag">
+                                <div class="field-group flow">
+                                    <label class="flex-group">
+                                        <input type="checkbox" :value="dag" x-model="geselecteerdeDagen[dag]">
+                                        <span x-text="dag"></span>
+                                    </label>
+
+                                    <div class="terugbellen flex-group flex-group--between" x-show="geselecteerdeDagen[dag]" x-transition="">
+                                        <input type="time" :name="`tijd_van[${dag}]`">
+                                        <span>tot</span>
+                                        <input type="time" :name="`tijd_tot[${dag}]`">
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <input type="hidden" name="_form" value="contact">
+                        <input type="hidden" name="_subject" value="Contactformulier website">
+
+                        <div>
+                        <button type="submit" class="button" data-button-variant="primary">Verzend</button>
+                        </div>
+                    </form>
+
+                    <div id="form-response"></div>
+                </div>
+        </div>
     </div>
 </section>
     </main>

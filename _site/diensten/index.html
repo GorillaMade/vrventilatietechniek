@@ -37,6 +37,9 @@
         <li class="nav__item">
             <a href="/projecten/" class="nav__link">Projecten</a>
         </li>
+        <li class="nav__item">
+            <a href="/contact/" class="nav__link">Contact</a>
+        </li>
     </ul>
 </nav>
     </div>
@@ -48,14 +51,14 @@
 
         <ul class="grid" data-layout="thirds" role="list">
                 <li class="flow">
-                    <h2 class="fs-step-2 color-primary-600">Inspectie</h2>
-                    <p>Met een persoonlijke inspectie controleer ik uw systeem grondig. Problemen komen zo op tijd aan het licht en de luchtkwaliteit blijft op peil.</p>
-                    <a class="button--link" href="/services/inspectie/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
-                </li>
-                <li class="flow">
                     <h2 class="fs-step-2 color-primary-600">Installatie</h2>
                     <p>Ik installeer ventilatiesystemen die perfect aansluiten op uw situatie. Zo voorkomt u vocht en schimmel en geniet u van frisse, gezonde lucht.</p>
                     <a class="button--link" href="/services/installatie/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
+                </li>
+                <li class="flow">
+                    <h2 class="fs-step-2 color-primary-600">Inspectie</h2>
+                    <p>Met een persoonlijke inspectie controleer ik uw systeem grondig. Problemen komen zo op tijd aan het licht en de luchtkwaliteit blijft op peil.</p>
+                    <a class="button--link" href="/services/inspectie/">Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon></a>
                 </li>
                 <li class="flow">
                     <h2 class="fs-step-2 color-primary-600">Onderhoud</h2>
@@ -92,5 +95,46 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+  function showError(message) {
+    const responseDiv = document.getElementById('form-response');
+    responseDiv.innerHTML = `<div class="form-error">${message}</div>`;
+    responseDiv.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function clearError() {
+    document.getElementById('form-response').innerHTML = '';
+  }
+
+  function validateContactForm(form) {
+    clearError();
+
+    const naam = form.querySelector('[name="naam"]');
+    const email = form.querySelector('[name="email"]');
+    const terugbel = form.querySelector('[name="terugbel"]').checked;
+    const telefoon = form.querySelector('[name="telefoon"]');
+
+    if (!naam.value.trim()) {
+      showError("Vul uw naam in.");
+      naam.focus();
+      return false;
+    }
+
+    if (!email.value.trim() || !email.validity.valid) {
+      showError("Voer een geldig e-mailadres in.");
+      email.focus();
+      return false;
+    }
+
+    if (terugbel && !telefoon.value.trim()) {
+      showError("Vul uw telefoonnummer in.");
+      telefoon.focus();
+      return false;
+    }
+
+    return true;
+  }
+</script>
 
 </body></html>

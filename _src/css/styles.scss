@@ -28,6 +28,29 @@
 
 
 // -----------------------------------------------------------------------------
+// input
+// -----------------------------------------------------------------------------
+
+input,
+textarea,
+select {
+    color: var(--neutral-500);
+    background: var(--neutral-50);
+    accent-color: var(--primary-500);
+    background: var(--neutral-50);
+    border: 1px solid var(--neutral-300);
+    border-radius: var(--radius-s);
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    width: 100%;
+    padding: var(--_input-padding, var(--space-xs));
+}
+
+
+// -----------------------------------------------------------------------------
 // 
 // -----------------------------------------------------------------------------
 
@@ -189,14 +212,24 @@
 }
 
 
-.site-footer {
-  color: var(--neutral-50);
-  background: var(--primary-900);
+// -----------------------------------------------------------------------------
+// Page: Contact
+// -----------------------------------------------------------------------------
+
+.terugbellen {
+    &>input[type="time"] {
+        width: fit-content;
+    }
 }
 
 
-hr {
-  background: var(--neutral-200);
-  border: 0;
-  height: 1px;
+.site-footer {
+  color: var(--neutral-50);
+  background: var(--primary-900);
+
+  hr {
+    background: var(--primary-50);
+    border: 0;
+    height: 1px;
+  }
 }

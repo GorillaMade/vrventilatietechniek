@@ -37,6 +37,9 @@
         <li class="nav__item">
             <a href="/projecten/" class="nav__link">Projecten</a>
         </li>
+        <li class="nav__item">
+            <a href="/contact/" class="nav__link">Contact</a>
+        </li>
     </ul>
 </nav>
     </div>
@@ -76,5 +79,46 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+  function showError(message) {
+    const responseDiv = document.getElementById('form-response');
+    responseDiv.innerHTML = `<div class="form-error">${message}</div>`;
+    responseDiv.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function clearError() {
+    document.getElementById('form-response').innerHTML = '';
+  }
+
+  function validateContactForm(form) {
+    clearError();
+
+    const naam = form.querySelector('[name="naam"]');
+    const email = form.querySelector('[name="email"]');
+    const terugbel = form.querySelector('[name="terugbel"]').checked;
+    const telefoon = form.querySelector('[name="telefoon"]');
+
+    if (!naam.value.trim()) {
+      showError("Vul uw naam in.");
+      naam.focus();
+      return false;
+    }
+
+    if (!email.value.trim() || !email.validity.valid) {
+      showError("Voer een geldig e-mailadres in.");
+      email.focus();
+      return false;
+    }
+
+    if (terugbel && !telefoon.value.trim()) {
+      showError("Vul uw telefoonnummer in.");
+      telefoon.focus();
+      return false;
+    }
+
+    return true;
+  }
+</script>
 
 </body></html>
