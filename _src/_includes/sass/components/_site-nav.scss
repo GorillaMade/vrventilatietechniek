@@ -65,6 +65,7 @@
         &[aria-current="page"] {
             --nav-link-foreground: var(--_nav-link-foreground-active);
             --nav-link-background: var(--_nav-link-background-active);
+            font-weight: var(--fw-medium);
         }
     }
 }

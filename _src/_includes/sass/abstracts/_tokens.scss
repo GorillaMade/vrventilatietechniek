@@ -20,12 +20,12 @@ $site-header-padding-block: var(--space-3xs);
 $site-nav-list-gap: 1px;
 
 $site-nav-link-foreground: var(--primary-900);
-$site-nav-link-foreground-hover: var(--primary-500);
-$site-nav-link-foreground-active: var(--primary-800);
+$site-nav-link-foreground-hover: var(--primary-300);
+$site-nav-link-foreground-active: var(--primary-500);
 
 $site-nav-link-background: transparent;
-$site-nav-link-background-hover: var(--primary-100);
-$site-nav-link-background-active: var(--primary-200);
+$site-nav-link-background-hover: var(--primary-50);
+$site-nav-link-background-active: var(--primary-100);
 
 $site-nav-link-font-family: inherit;
 $site-nav-link-font-size: var(--fs-step-0);
