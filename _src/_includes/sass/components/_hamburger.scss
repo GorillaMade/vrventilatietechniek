@@ -61,7 +61,7 @@
     }
 }
 
-@include mq(md) {
+@media (width > 974px) {
     .hamburger {
         display: none;
     }
