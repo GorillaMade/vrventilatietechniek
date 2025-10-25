@@ -23,7 +23,7 @@
             <span class="bar bar--2"></span>
             <span class="bar bar--3"></span>
         </button>
-        <nav id="main-nav" class="site-nav nav--responsive" x-bind:class="{ 'open': menuOpen }">
+        <nav class="site-nav nav">
     <ul class="nav__list" role="list">
         <li class="nav__item">
             <a href="/" class="nav__link">Home</a>
@@ -42,6 +42,7 @@
         </li>
     </ul>
 </nav>
+
     </div>
 </header>
     <main>
@@ -84,6 +85,17 @@
 </footer>
 
 <!-- Scripts -->
+<script>
+const navToggle = document.querySelector('[aria-controls="site-nav"]');
+
+if (navToggle) {
+  navToggle.addEventListener("click", function () {
+    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+  });
+};
+</script>
+
 <script type="module" src="js/main.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -129,5 +141,6 @@
     return true;
   }
 </script>
+
 
 </body></html>

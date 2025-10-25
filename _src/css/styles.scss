@@ -3,13 +3,6 @@
 @forward "sass/utilities";
 @forward "sass/layout";
 
-
-.brand {
-  flex: 1 1 auto; // ✅ laat het logo meeschalen
-  min-width: 12rem; // ✅ minimale breedte voor logo
-  font-weight: var(--fw-bold);
-}
-
 //
 //
 //
@@ -24,6 +17,35 @@
 
 .bg-gradient-blue-to-white {
   background: linear-gradient(180deg, var(--primary-50), white);
+}
+
+
+// -----------------------------------------------------------------------------
+// Branding
+// -----------------------------------------------------------------------------
+
+.brand {
+    --brand-color: var(--primary-500);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    text-decoration: none;
+
+    &__logo {
+        height: 6ex;
+        fill: none;
+        stroke: var(--brand-color);
+        stroke-width: 2px;
+    }
+
+    &__name {
+        color: var(--brand-color);
+        font-family: var(--ff-sans);
+        font-size: var(--fs-step--1);
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+    }
 }
 
 

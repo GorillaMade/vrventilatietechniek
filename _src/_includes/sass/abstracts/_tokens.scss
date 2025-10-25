@@ -17,23 +17,36 @@ $site-header-padding-block: var(--space-3xs);
 // Navigation
 // -----------------------------------------------------------------------------
 
-$nav-foreground: inherit;
-$nav-foreground-hover: var(--primary-500);
+$site-nav-list-gap: 1px;
 
-$nav-background: inherit;
-$nav-background-hover: var(--primary-100);
+$site-nav-link-foreground: var(--primary-900);
+$site-nav-link-foreground-hover: var(--primary-500);
+$site-nav-link-foreground-active: var(--primary-800);
+
+$site-nav-link-background: transparent;
+$site-nav-link-background-hover: var(--primary-100);
+$site-nav-link-background-active: var(--primary-200);
+
+$site-nav-link-font-family: inherit;
+$site-nav-link-font-size: var(--fs-step-0);
+$site-nav-link-font-weight: inherit;
+$site-nav-link-line-height: 1.1;
+
+$site-nav-link-padding: var(--space-s);
+$site-nav-link-padding-mobile: var(--space-m);
+$site-nav-link-border-radius: none;
 
 // -----------------------------------------------------------------------------
 // Hamburger
 // -----------------------------------------------------------------------------
 
-$hamburger-background: var(--primary-600);
-$hamburger-padding: var(--space-2xs);
+$hamburger-background: transparent;
+$hamburger-padding: var(--space-xs);
 $hamburger-animation-timing: 200ms ease-in-out;
 $hamburger-border: none;
 $hamburger-border-radius: .125rem;
 
-$hamburger-bar-color: var(--neutral-50);
+$hamburger-bar-color: var(--primary-800);
 $hamburger-bar-width: 36px;
 $hamburger-bar-height: 6px;
 $hamburger-bar-gap: 4px;

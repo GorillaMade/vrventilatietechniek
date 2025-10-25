@@ -4,11 +4,9 @@
 // Basis (mobile first)
 // -----------------------------------------------------------------------------
 
-.site-nav {
+.nav {
     flex-basis: 100%;
     text-align: start;
-
-    
 }
 
 .nav__list {
@@ -73,7 +71,7 @@
 // -----------------------------------------------------------------------------
 
 @media (min-width: 48em) {
-    .site-nav {
+    .nav {
         display: flex;
         flex-basis: auto;
         text-align: center;
