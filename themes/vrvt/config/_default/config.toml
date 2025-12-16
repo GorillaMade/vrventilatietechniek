@@ -1,6 +1,0 @@
-baseURL = "https://bedrijfsnaam.nl/"
-languageCode = "nl-nl"
-title = "Bedrijfs Naam"
-theme = "vrvt"
-
-enableRobotTXT = true
