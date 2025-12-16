@@ -11,9 +11,9 @@ meta:
 
 {{< breadcrumbs >}}
 
-# Wat ik voor u kan doen
+# Wat wij voor u doen
 
-Lorem ipsum
+Deskundige ventilatie-oplossingen voor een gezond en comfortabel binnenklimaat. Van advies en installatie tot onderhoud en service.
 
 {{< /block_services >}}
 {{< block_cta >}}{{< /block_cta >}}
