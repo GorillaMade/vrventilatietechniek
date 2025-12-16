@@ -36,24 +36,24 @@ Professionele ventilatie-oplossingen op maat voor bedrijven en particulieren. Me
 {{< /block_image >}}
 {{< block_features >}}
 
-## Waarom kiezen voor VR Ventilatie Techniek?
+## Frisse lucht en zekerheid, dat beloven wij
 
-Wij bieden deskundige ventilatie-oplossingen op maat, met persoonlijke aandacht en vakmanschap. Ontdek waarom klanten voor ons kiezen.
+Wij leveren ventilatie-oplossingen op maat met persoonlijke aandacht en vakmanschap. Met ons bent u verzekerd van een gezond, comfortabel en efficiënt binnenklimaat.
 
-  ---
+---
 
-  ### Persoonlijk en direct contact
-  Eén vast aanspreekpunt met meer dan 10 jaar ervaring, korte lijnen en duidelijke communicatie.
+### Persoonlijk en direct contact
+Één vast aanspreekpunt met meer dan 10 jaar ervaring, korte lijnen en duidelijke communicatie.
 
-  ---
+---
 
-  ### Oplossingen volledig op maat
-  Geen standaardoplossingen, maar ventilatiesystemen afgestemd op uw gebouw, wensen en gebruik.
+### Oplossingen volledig op maat
+Geen standaardoplossingen, maar ventilatiesystemen die perfect aansluiten op uw gebouw, wensen en gebruik.
 
-  ---
+---
 
-  ### Betrouwbaar vakmanschap
-  Vakkundige installatie en onderhoud met focus op kwaliteit, duurzaamheid en een gezond binnenklimaat.
+### Betrouwbaar vakmanschap
+Vakkundige installatie en onderhoud met focus op kwaliteit, duurzaamheid en een gezond binnenklimaat.
 
 {{< /block_features >}}
 {{< block_reviews >}}{{< /block_reviews >}}
