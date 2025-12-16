@@ -1,0 +1,11 @@
+baseURL: "https://vrventilatietechniek.nl/"
+title: "VR Ventilatie Techniek"
+theme: blocks
+
+# -- Robot --
+enableRobotTXT: true
+
+# -- Languages --
+languageCode: "nl-nl"
+defaultContentLanguage: nl
+

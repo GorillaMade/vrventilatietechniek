@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="[] [] [ py-xl-3xl ]">
+    <div class="wrapper">
+        {{ .Content }}
+
+        <ul class="grid" data-layout="thirds" role="list">
+            {{ range .Pages }}
+                <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+{{ end }}

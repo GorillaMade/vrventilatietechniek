@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VentilatieInspectie on VR Ventilatie Techniek</title>
+    <link>http://localhost:1313/tags/ventilatieinspectie/</link>
+    <description>Recent content in VentilatieInspectie on VR Ventilatie Techniek</description>
+    <generator>Hugo</generator>
+    <language>nl</language>
+    <atom:link href="http://localhost:1313/tags/ventilatieinspectie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inspectie</title>
+      <link>http://localhost:1313/diensten/inspectie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/diensten/inspectie/</guid>
+      <description>&lt;p&gt;Een goed functionerend ventilatiesysteem is essentieel voor een gezond en comfortabel binnenklimaat. Met een grondige ventilatie-inspectie brengen wij de staat en werking van uw systeem volledig in kaart. Vaak merkt u niet direct dat er vervuiling, verstoppingen of kleine defecten aanwezig zijn, terwijl deze wél grote gevolgen kunnen hebben voor zowel de luchtkwaliteit als uw energiekosten.&lt;/p&gt;&#xA;&lt;p&gt;Tijdens onze inspectie controleren wij onder andere de luchtstroom, filters, ventilatiekanalen en de werking van mechanische onderdelen. Zo kunnen we tijdig problemen opsporen voordat ze leiden tot dure reparaties of een ongezonde werkomgeving.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

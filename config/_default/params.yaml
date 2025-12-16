@@ -1,0 +1,26 @@
+# -- Site specifieke params --
+author: "Vernal Ricardo"
+description: ""
+keywords: ""
+
+favicon: "/uploads/favicon.svg"
+#logo: "/uploads/logo.png"
+
+
+# -- S.E.O. params --
+seo:
+  enable: true
+  twitter_card: "summary_large_image"
+  og_image: "/uploads/og-image.png"
+
+
+# -- Schema params --
+schema:
+  type: "Organization"
+  name: "VR Ventilatie Techniek"
+  url: "https://vrventilatietechniek.nl/"
+  logo: "/uploads/logo.png"
+  sameAs:
+    - "https://linkedin.com"
+    - "https://instagram.com"
+  

@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="taxonomy">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </header>
+
+  <ul class="taxonomy-pages">
+    {{ range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ else }}
+      <li>Geen items gevonden.</li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

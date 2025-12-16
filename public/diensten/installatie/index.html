@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Installatie | VR Ventilatie Techniek</title>
+
+    
+    
+        
+            <link rel="stylesheet" href="/css/main.css">
+        
+    
+
+
+      <script src="/js/main.js"></script>
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            
+                <span>VR Ventilatie Techniek</span>
+            
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        
+<nav class="nav" aria-label="Hoofdmenu">
+  <ul class="nav__list" role="navigation"><li class="nav__item">
+        <a
+          href="/over-mij/"
+          class="nav__link"
+        >Over mij</a>
+    </li><li class="nav__item">
+        <a
+          href="/diensten/"
+          class="nav__link"
+        >Diensten</a>
+    </li><li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+        >Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<script>
+(function () {
+  var OPEN_CLASS = 'is-open';
+  var TOGGLE_SEL = '.nav__toggle';
+
+  function closeItem(item) {
+    if (!item) return;
+    item.classList.remove(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openItem(item) {
+    if (!item) return;
+    item.classList.add(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleItem(item) {
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (!toggle) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') closeItem(item);
+    else openItem(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav__item.' + OPEN_CLASS).forEach(function (item) {
+      closeItem(item);
+    });
+  }
+
+  function init() {
+    
+    closeAll();
+
+    
+    document.querySelectorAll(TOGGLE_SEL).forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = toggle.closest('.nav__item');
+        toggleItem(item);
+      });
+    });
+
+    
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+    </div>
+</header>
+  <main>
+    <section class="service region">
+    <div class="wrapper wrapper--small flow">
+        <ul class="breadcrumbs">
+  <li><a href="/">Home</a></li><li>
+        <a href="/diensten/">
+          Diensten
+        </a>
+      </li><li>Installatie</li></ul>
+
+        <h1 class="text--center">Installatie</h1>
+        
+        <div class="meta text--center">
+            
+            <div>
+                <ul class="cluster" role="list">
+                    
+                    <li><span class="tag">VentilatieInstallatie</span>
+                    
+                    <li><span class="tag">Vakkundig</span>
+                    
+                    <li><span class="tag">Energiezuinig</span>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="wrapper wrapper--wide my-l"><img src="/uploads/gallery/01.jpg" alt="" class="featuredimage" />
+    </div>
+    <div class="wrapper wrapper--small service">
+        <p>Wij verzorgen de professionele installatie van ventilatiesystemen die volledig aansluiten op uw woning of bedrijfspand. Een correct geïnstalleerd systeem is cruciaal: een slecht geplaatst systeem kan leiden tot vochtproblemen, schimmelvorming, slechte luchtkwaliteit en hogere energiekosten.</p>
+<p>Tijdens de installatie zorgen wij ervoor dat elk onderdeel optimaal functioneert. Van het juist plaatsen van ventilatiekanalen en filters tot het afstellen van de luchtstromen: alles wordt vakkundig uitgevoerd volgens de hoogste standaarden. Dit garandeert een efficiënte werking, maximale energiezuinigheid en een gezond, comfortabel binnenklimaat.</p>
+<p>Met onze expertise heeft u één aanspreekpunt voor een zorgeloze installatie. Zo bent u verzekerd van een ventilatiesysteem dat jarenlang betrouwbaar werkt en een optimale luchtkwaliteit biedt voor uw woning of bedrijfspand.</p>
+
+    </div>
+</section>
+    <section class="cta region">
+    <div class="wrapper">
+        <div class="switcher box">
+            <div class="text flow">
+                <div><h3 id="klaar-voor-een-gezond-binnenklimaat">Klaar voor een gezond binnenklimaat?</h3>
+<p>Neem vandaag nog contact op voor persoonlijk advies of een vrijblijvende offerte. Samen zorgen we voor een ventilatie-oplossing die perfect past bij uw situatie.</p>
+<a href="/contact/" class="button" data-button-variant="primary" title="Vraag vrijblijvend advies aan">Vraag vrijblijvend advies aan</a>
+
+
+</div>
+            </div>
+            <div class="image"><p><img src="/uploads/20944202.svg" alt=""></p></div>
+        </div>
+    </div>
+</section>
+  </main>
+  <footer class="[] [] [ region ]">
+    <div class="wrapper">
+        <div class="flex-group flex-group--between">
+          <span>Copyright 2025 door <strong>VR Ventilatie Techniek</strong>. All rights reserved.</span>
+          <ul class="buttons social cluster" role="list"><li><a href="https://linkedin.com" class="button icon"><img src="/img/linkedin.svg" alt="linkedin" /></a></li><li><a href="https://instagram.com" class="button icon"><img src="/img/instagram.svg" alt="instagram" /></a></li><li><a href="https://wa.me/&#43;31641006174" class="button icon"><img src="/img/whatsapp.svg" alt="whatsapp" /></a></li></ul>
+        </div>
+        <hr>
+
+        <div class="made-by">
+          gemaakt door <a href="https://gorillamade.nl/">GorillaMade</a>
+        </div>
+    </div>
+</footer>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

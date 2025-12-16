@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blocks on VR Ventilatie Techniek</title>
+    <link>http://localhost:1313/blocks/</link>
+    <description>Recent content in Blocks on VR Ventilatie Techniek</description>
+    <generator>Hugo</generator>
+    <language>nl</language>
+    <atom:link href="http://localhost:1313/blocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blocks/cta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blocks/cta/</guid>
+      <description>&lt;h3 id=&#34;klaar-voor-een-gezond-binnenklimaat&#34;&gt;Klaar voor een gezond binnenklimaat?&lt;/h3&gt;&#xA;&lt;p&gt;Neem vandaag nog contact op voor persoonlijk advies of een vrijblijvende offerte. Samen zorgen we voor een ventilatie-oplossing die perfect past bij uw situatie.&lt;/p&gt;&#xA;&lt;a href=&#34;http://localhost:1313/contact/&#34; class=&#34;button&#34; data-button-ghost=&#34;&#34; title=&#34;Vraag vrijblijvend advies aan&#34;&gt;Vraag vrijblijvend advies aan&lt;/a&gt;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/uploads/20944202.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blocks/reviews/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blocks/reviews/</guid>
+      <description>&lt;h3 id=&#34;wat-klanten-over-ons-zeggen&#34;&gt;Wat klanten over ons zeggen&lt;/h3&gt;&#xA;&lt;p&gt;Wij zijn trots op de waardering van onze klanten. Lees hoe wij met persoonlijke aandacht, vakmanschap en betrouwbare service zorgen voor een gezond en comfortabel binnenklimaat.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

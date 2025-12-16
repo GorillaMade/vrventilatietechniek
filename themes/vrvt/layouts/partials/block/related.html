@@ -1,0 +1,8 @@
+{{ with .Site.RegularPages.Related . }}
+  <h3>Gerelateerde diensten</h3>
+  <ul>
+    {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}

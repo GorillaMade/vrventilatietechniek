@@ -1,0 +1,11 @@
+baseURL: ""
+title: ""
+theme: blocks
+
+# -- Languages --
+languageCode: "nl-nl"
+defaultContentLanguage: nl
+
+# -- Robot --
+enableRobotTXT: true
+

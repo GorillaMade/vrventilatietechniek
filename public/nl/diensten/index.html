@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Diensten | VR Ventilatie Techniek</title>
+
+    
+    
+        
+            <link rel="stylesheet" href="/css/main.css">
+        
+    
+
+
+      <script src="/js/main.js"></script>
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            
+                <span>VR Ventilatie Techniek</span>
+            
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        
+<nav class="nav" aria-label="Hoofdmenu">
+  <ul class="nav__list" role="navigation"><li class="nav__item">
+        <a
+          href="/over-mij/"
+          class="nav__link"
+        >Over mij</a>
+    </li><li class="nav__item">
+        <a
+          href="/diensten/"
+          class="nav__link"
+        >Diensten</a>
+    </li><li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+        >Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<script>
+(function () {
+  var OPEN_CLASS = 'is-open';
+  var TOGGLE_SEL = '.nav__toggle';
+
+  function closeItem(item) {
+    if (!item) return;
+    item.classList.remove(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openItem(item) {
+    if (!item) return;
+    item.classList.add(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleItem(item) {
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (!toggle) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') closeItem(item);
+    else openItem(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav__item.' + OPEN_CLASS).forEach(function (item) {
+      closeItem(item);
+    });
+  }
+
+  function init() {
+    
+    closeAll();
+
+    
+    document.querySelectorAll(TOGGLE_SEL).forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = toggle.closest('.nav__item');
+        toggleItem(item);
+      });
+    });
+
+    
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+    </div>
+</header>
+  <main>
+    
+    <section class="services region flow">
+
+    
+    <div class="wrapper wrapper--small text--center"><h1 id="dienten-title">Dienten title</h1>
+</div>
+    
+
+    <div class="wrapper flow region">
+        <ul class="contentitems grid services" data-layout="thirds" role="list" 
+            data-pagesize="99">
+
+            
+            <li class="item  tag_VentilatieInspectie tag_Luchtkwaliteit tag_Preventief">
+
+                <a href="/diensten/inspectie/">
+                      <div class="img">
+                          <img src="/uploads/ffb54331-67c0-43b1-9e62-f205845d3ff7.JPG" alt="Inspectie" 
+                               style="cursor: pointer;" loading="lazy" decoding="async"
+                               onclick="document.location.href='\/diensten\/inspectie\/';" />
+                      </div>
+                  </a>
+
+                <h3 class="h4">Inspectie</h3>
+                <div class="summary">
+                    <p>Een goed functionerend ventilatiesysteem is essentieel voor een gezond en comfortabel binnenklimaat. Met een grondige ventilatie-inspectie brengen wij...</p>
+                    <p>
+                        <a href="/diensten/inspectie/" class="button--link">
+                            Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </p>
+                </div>
+            </li>
+
+            
+            <li class="item  tag_VentilatieInstallatie tag_Vakkundig tag_Energiezuinig">
+
+                <a href="/diensten/installatie/">
+                      <div class="img">
+                          <img src="/uploads/ffb54331-67c0-43b1-9e62-f205845d3ff7.JPG" alt="Installatie" 
+                               style="cursor: pointer;" loading="lazy" decoding="async"
+                               onclick="document.location.href='\/diensten\/installatie\/';" />
+                      </div>
+                  </a>
+
+                <h3 class="h4">Installatie</h3>
+                <div class="summary">
+                    <p>Wij verzorgen de professionele installatie van ventilatiesystemen die volledig aansluiten op uw woning of bedrijfspand. Een correct geïnstalleerd syst...</p>
+                    <p>
+                        <a href="/diensten/installatie/" class="button--link">
+                            Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </p>
+                </div>
+            </li>
+
+            
+            <li class="item  tag_VentilatieOnderhoud tag_Schoon en Efficiënt tag_Betrouwbaar">
+
+                <a href="/diensten/onderhoud/">
+                      <div class="img">
+                          <img src="/uploads/ffb54331-67c0-43b1-9e62-f205845d3ff7.JPG" alt="Onderhoud" 
+                               style="cursor: pointer;" loading="lazy" decoding="async"
+                               onclick="document.location.href='\/diensten\/onderhoud\/';" />
+                      </div>
+                  </a>
+
+                <h3 class="h4">Onderhoud</h3>
+                <div class="summary">
+                    <p>Regelmatig onderhoud is essentieel om uw ventilatiesysteem schoon, efficiënt en betrouwbaar te houden. Zonder structureel onderhoud hopen stof, vuil e...</p>
+                    <p>
+                        <a href="/diensten/onderhoud/" class="button--link">
+                            Lees verder <ion-icon class="color-primary-500" name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </p>
+                </div>
+            </li>
+
+            
+        </ul>
+    </div>
+</section>
+
+
+
+  </main>
+  <footer class="[] [] [ region ]">
+    <div class="wrapper">
+        <div class="flex-group flex-group--between">
+          <span>Copyright 2025 door <strong>VR Ventilatie Techniek</strong>. All rights reserved.</span>
+          <ul class="buttons social cluster" role="list"><li><a href="https://linkedin.com" class="button icon"><img src="/img/linkedin.svg" alt="linkedin" /></a></li><li><a href="https://instagram.com" class="button icon"><img src="/img/instagram.svg" alt="instagram" /></a></li><li><a href="https://wa.me/&#43;31641006174" class="button icon"><img src="/img/whatsapp.svg" alt="whatsapp" /></a></li></ul>
+        </div>
+        <hr>
+
+        <div class="made-by">
+          gemaakt door <a href="https://gorillamade.nl/">GorillaMade</a>
+        </div>
+    </div>
+</footer>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

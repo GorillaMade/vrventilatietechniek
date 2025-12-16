@@ -1,0 +1,37 @@
+<article class="post">
+    <div class="wrapper title">
+        {{ partial "breadcrumbs.html" . }}
+        <h1>{{ page.Title | safeHTML }}</h1>
+        {{- if or page.Params.date (index page.Params.tags 0) -}}
+        <div class="meta">
+            <div class="meta__date">
+                {{- page.Date | time.Format ":date_medium" -}}
+            </div>
+            {{- if index page.Params.tags -}}
+            <div class="meta__tags">
+                <ul class="cluster" role="list">
+                    {{- range page.Params.tags -}}
+                    <li>
+                        <a href='{{ relLangURL "" }}blog/?tag{{ . }}'>{{ . }}</a>
+                    </li>
+                    {{- end -}}
+                </ul>
+            </div>
+            {{- end -}}
+        </div>
+        {{- end -}}
+    </div>
+    <div class="wrapper wrapper--wide">
+        {{- $postimage := `/uploads/gallery/01.jpg` -}}
+        {{- if page.Params.image -}}
+            {{- $postimage = page.Params.image -}}
+        {{- end -}}
+        {{- if (resources.GetMatch $postimage) -}}
+            {{- $postimage = ((resources.GetMatch $postimage).Fill `1600x800 jpg Smart q50`).RelPermalink -}}
+        {{- end -}}
+        <img src="{{ $postimage }}" alt="{{ .Title }}" class="featuredimage" />
+    </div>
+    <div class="wrapper post">
+        {{ page.Content }}
+    </div>
+</article>

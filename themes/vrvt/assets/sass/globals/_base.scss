@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+// Body
+// -----------------------------------------------------------------------------
+
+body {
+    background: var(--neutral-50);
+    color: var(--neutral-500);
+    font-family: var(--ff-sans);
+    font-size: var(--fs-step-0);
+    font-weight: var(--fw-regular);
+}
+
+
+// -----------------------------------------------------------------------------
+// Header(s)
+// -----------------------------------------------------------------------------
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: var(--primary-900);
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-semibold);
+    line-height: 1.2;
+    color: inherit;
+}
+
+h1 {
+    font-size: var(--fs-step-5);
+}
+
+h2 {
+    font-size: var(--fs-step-4);
+}
+
+h3 {
+    font-size: var(--fs-step-3);
+}
+
+h4 {
+    font-size: var(--fs-step-2);
+}
+
+h5 {
+    font-size: var(--fs-step-1);
+}
+
+h6 {
+    font-size: var(--fs-step-0);
+}

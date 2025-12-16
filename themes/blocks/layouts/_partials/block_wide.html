@@ -1,0 +1,13 @@
+{{- $inner := . -}}
+{{- if or (eq $inner "") (eq $inner nil) -}}
+    {{- $inner = "Empty block found. Condsider creating a 'content/block/wide.md' file." -}}
+    {{- with page.Site.GetPage "blocks/wide.md" -}}
+        {{- $inner = .RawContent -}}
+    {{- end -}}
+{{- end -}}
+
+<section class="wide">
+    <div class="wrapper wrapper--wide">
+    {{- markdownify $inner -}}
+    </div>
+</section>

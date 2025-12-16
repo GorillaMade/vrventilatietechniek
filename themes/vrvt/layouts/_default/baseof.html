@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    {{ partial "shared/head.html" . }}
+</head>
+<body x-data>
+    {{ partial "shared/header.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "shared/footer.html" . }}
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+    <script src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js" defer></script>
+</body>
+</html>

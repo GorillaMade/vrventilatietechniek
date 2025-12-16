@@ -1,0 +1,22 @@
+{{- $inner := . -}}
+{{- if or (eq $inner "") (eq $inner nil) -}}
+    {{- $inner = "Empty block found. Consider creating a 'content/block/faq.md' file." -}}
+    {{- with page.Site.GetPage "block/faq.md" -}}
+        {{- $inner = .RawContent -}}
+    {{- end -}}
+{{- end -}}
+{{- $parts := split $inner "---" -}}
+<section class="faqs">
+    <div class="wrapper">
+        {{- range $parts -}}
+            {{- $title := index (findRE `(?s)<h2.*?>.*?</h2.*?>` (markdownify .) 1) 0 -}}
+            {{- $titleplain := replace (index (split $title ">") 1) `</h2` `` -}}
+            <details class="faq">
+                <summary class="faq__title">{{- $titleplain | markdownify -}}</summary>
+                <div class="faq__content">
+                    {{- (replace (markdownify .) $title  "") | safeHTML -}}
+                </div>
+            </details>
+        {{ end }}
+    </div>
+</section>

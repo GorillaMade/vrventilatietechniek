@@ -1,0 +1,14 @@
+[home]
+outputs = ["HTML", "RSS", "JSON"]
+
+[section]
+outputs = ["HTML", "RSS"]
+
+[page]
+outputs = ["HTML"]
+
+[taxonomy]
+outputs = ["HTML"]
+
+[taxonomyTerm]
+outputs = ["HTML"]

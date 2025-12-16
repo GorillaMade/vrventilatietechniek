@@ -1,11 +1,22 @@
+[build.environment]
+DART_SASS_VERSION = "1.96.0"
+GO_VERSION = "1.25.5"
+HUGO_VERSION = "0.152.2"
+HUGO_ENV = "production"
+TZ = "Europe/Amsterdam"
+
 [build]
-  publish = "_site"
-  command = """
-  curl -fsSL https://deno.land/install.sh | sh && \
-  /opt/buildhome/.deno/bin/deno task build \
-"""
+publish = "public"
+command = """\
+  curl -sLJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  export PATH="${HOME}/.local/dart-sass:${PATH}" && \
+  git config core.quotepath false && \
+  hugo --gc --minify --baseURL "${URL}"
+  """
 
 [[redirects]]
   from = "/*"
+  to = "/nl/404.html"
   status = 404
-  to = "/404"

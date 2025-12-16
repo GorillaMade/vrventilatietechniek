@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on VR Ventilatie Techniek</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on VR Ventilatie Techniek</description>
+    <generator>Hugo</generator>
+    <language>nl</language>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Betrouwbaar</title>
+      <link>http://localhost:1313/tags/betrouwbaar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/betrouwbaar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Energiezuinig</title>
+      <link>http://localhost:1313/tags/energiezuinig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/energiezuinig/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luchtkwaliteit</title>
+      <link>http://localhost:1313/tags/luchtkwaliteit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/luchtkwaliteit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Preventief</title>
+      <link>http://localhost:1313/tags/preventief/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/preventief/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Schoon en Efficiënt</title>
+      <link>http://localhost:1313/tags/schoon-en-effici%C3%ABnt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/schoon-en-effici%C3%ABnt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vakkundig</title>
+      <link>http://localhost:1313/tags/vakkundig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vakkundig/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VentilatieInspectie</title>
+      <link>http://localhost:1313/tags/ventilatieinspectie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ventilatieinspectie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VentilatieInstallatie</title>
+      <link>http://localhost:1313/tags/ventilatieinstallatie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ventilatieinstallatie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VentilatieOnderhoud</title>
+      <link>http://localhost:1313/tags/ventilatieonderhoud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ventilatieonderhoud/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

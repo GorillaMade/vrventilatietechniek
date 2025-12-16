@@ -1,0 +1,11 @@
+# -- Socials --
+list:
+  - title: "linkedin"
+    link: "https://linkedin.com"
+    logo_image: "/img/linkedin.svg"
+  - title: "instagram"
+    link: "https://instagram.com"
+    logo_image: "/img/instagram.svg"
+  - title: "whatsapp"
+    link: "https://wa.me/+31641006174"
+    logo_image: /img/whatsapp.svg
