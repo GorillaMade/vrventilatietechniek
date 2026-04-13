@@ -7,7 +7,8 @@
 {{- end -}}
 <section class="contact region">
     <div class="wrapper switcher">
-        <div class="box">
+        <!-- Container die vervangen wordt door HTMX -->
+        <div class="box" id="form-container">
             {{- partial "form.html" (index page.Site.Data page.Site.Language.Lang).contactform -}}
         </div>
         <div class="text">
